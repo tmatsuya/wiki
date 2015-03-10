@@ -5,7 +5,7 @@ VLOG_SRCS += $(wildcard ../rtl/*.v)
 VLOG_SRCS += $(wildcard ../../../cores/xgmiisync/rtl/*.v)
 VLOG_SRCS += $(wildcard ../../../cores/crc32/rtl/*.v)
 SVLOG_SRCS := $(wildcard ../rtl/*.sv)
-SVLOG_SRCS += tb_top.sv
+SVLOG_SRCS += top_tb.sv
 
 
 XVLOG_OPTS := -m64 -d SIMULATION
