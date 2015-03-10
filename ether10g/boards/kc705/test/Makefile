@@ -50,7 +50,7 @@ xgui: xsim
 	$(XSIM) -nolog -gui ether10g_sim
 
 iverilog:
-	iverilog -o app_tb app_tb.v ../rtl/app.v ../../../cores/xgmiisync/rtl/xgmiisync.v ../../../cores/crc32/rtl/crc32_d64.v
+	iverilog -o app_tb app_tb.v ../rtl/app.v ../../../cores/xgmiisync/rtl/xgmiisync.v ../../../cores/crc32/rtl/CRC32_D64.v
 	./app_tb
 
 .PHONY: clean
