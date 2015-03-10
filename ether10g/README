@@ -1,0 +1,24 @@
+KC705 internal SFP+ module test project
+-----------------------------
+[> Directory Structure
+ /cores/      Cores library, with Verilog sources, test benches and documentation.
+ /boards/     Top-level design files, constraint files and Makefiles
+              for supported FPGA boards.
+
+[> Support Boards
+1- Xilinx KC705
+
+[> Building tools
+You will need:
+ - Xilinx Vivado 2014.4.1
+
+[> How to build
+1- cd boards/kc705
+2- make (console mode) or make gui (GUI mode)
+
+[> Quickstart
+1- connect serial and JTAG cables
+2- cd boards/kc705
+3- make load (or make flash)
+
+[> History

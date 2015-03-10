@@ -1,0 +1,2 @@
+# compile vhdl design source files
+vhdl ten_gig_eth_pcs_pma_v5_0  "../synthesis/runs/top.srcs/sources_1/ip/ten_gig_eth_pcs_pma_ip/ten_gig_eth_pcs_pma_v5_0/hdl/ten_gig_eth_pcs_pma_v5_0_rfs.vhd"
