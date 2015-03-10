@@ -50,14 +50,6 @@ module testbench;
 		.*
 	);
 	
-	// main
-	initial begin
-		for (int i = 0; i < 2000; i++) begin
-			@(posedge clk_156);
-		end
-		$finish;
-	end
-
 	initial begin
 		button_n = 0;
 		button_s = 0;
