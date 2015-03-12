@@ -169,7 +169,7 @@ reg [15:0] rx_uport_dst;
 reg [ 9:0] rx_counter = 10'h0;
 reg [ 7:0] led_r;
 
-parameter [1:0] RX_IDLE = 1'b0,
+parameter       RX_IDLE = 1'b0,
                 RX_DATA = 1'b1;
 
 reg  rx_state = RX_IDLE;
