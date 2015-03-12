@@ -13,12 +13,16 @@ module testbench;
 		clk_200 = 0;
 		forever #(`XG_REF_CLK/2) clk_200 = ~clk_200;
 	end
-
-	// clock: sysclk_p, sysclk_n
-	logic sysclk_p = clk_200;
-	logic sysclk_n = ~clk_200;
+	logic clk200_p = clk_200;
+	logic clk200_n = ~clk_200;
 
 	// clock: sys_clk_p, sys_clk_n
+	`define XG_REF_CLK  10000        // 5000 * 1ps = 5ns, 200 MHz clock
+	logic clk_100;
+	initial begin
+		clk_100 = 0;
+		forever #(`XG_REF_CLK/2) clk_100 = ~clk_100;
+	end
 	logic sys_clk_p = clk_200;
 	logic sys_clk_n = ~clk_200;
 
@@ -53,10 +57,10 @@ module testbench;
 	end
 
 	task pcitx2pcirx;
-		input  pci_exp_txp;
-		input  pci_exp_txn;
-		output pci_exp_rxp;
-		output pci_exp_rxn;
+		input  [`TOP_PATH.LINK_WIDTH-1:0] pci_exp_txp;
+		input  [`TOP_PATH.LINK_WIDTH-1:0] pci_exp_txn;
+		output [`TOP_PATH.LINK_WIDTH-1:0] pci_exp_rxp;
+		output [`TOP_PATH.LINK_WIDTH-1:0] pci_exp_rxn;
 
 		@(posedge clk_200) begin
 			pci_exp_rxp = pci_exp_txp;
