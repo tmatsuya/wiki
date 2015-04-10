@@ -1,0 +1,25 @@
+PCI Express tester  (Work In Progress)
+-----------------------------
+[> Directory Structure
+ /boards/     Top-level design files, constraint files and Makefiles
+              for supported FPGA boards.
+ /doc/        Documentation.
+ /software/   Software.
+
+[> Support Boards
+1- Xilinx KC705
+
+[> Building tools
+You will need:
+ - Xilinx Vivado 2014.4
+
+[> How to build
+1- cd boards/kc705/synthesis
+2- ./make_gui.sh (you need run vivado) or ./make_batch.sh
+
+[> Quickstart
+1- connect serial and JTAG cables
+2- cd boards/kc705/synthesis
+3- ./load.sh (or ./flash.sh)
+
+[> History

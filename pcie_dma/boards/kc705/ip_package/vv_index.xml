@@ -1,0 +1,1900 @@
+<?xml version="1.0"?>
+<Index Version="1" Minor="0">
+	<Repository value="/proj/xhd_vse_com/users/mrinals/Project/Tasks/kintex7_trd/ipi_migrate/k7_connectivity_trd_v1_4/hardware/sources/ip_package">
+	</Repository>
+	<IP>
+		<VLNV value="xilinx.com:user:axilite_mux:1.0">
+		</VLNV>
+		<DisplayName value="axilite_mux_v1_0">
+		</DisplayName>
+		<Description value="axilite_mux_v1_0">
+		</Description>
+		<SupportsRdiCustomization value="true">
+		</SupportsRdiCustomization>
+		<SupportsRdiGeneration value="true">
+		</SupportsRdiGeneration>
+		<NativeOnly value="true">
+		</NativeOnly>
+		<ComponentPath value="xilinx.com_user_axilite_mux_1.0/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="kintex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="/BaseIP">
+			</Taxonomy>
+		</Taxonomies>
+	</IP>
+	<IP>
+		<VLNV value="xilinx.com:user:clock_top:1.0">
+		</VLNV>
+		<DisplayName value="clock_top_v1_0">
+		</DisplayName>
+		<Description value="clock_top_v1_0">
+		</Description>
+		<SupportsRdiCustomization value="true">
+		</SupportsRdiCustomization>
+		<SupportsRdiGeneration value="true">
+		</SupportsRdiGeneration>
+		<NativeOnly value="true">
+		</NativeOnly>
+		<ComponentPath value="xilinx.com_user_clock_top_1.0/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="kintex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="/BaseIP">
+			</Taxonomy>
+		</Taxonomies>
+	</IP>
+	<IP>
+		<VLNV value="xilinx.com:user:pcie_monitor:1.0">
+		</VLNV>
+		<DisplayName value="pcie_monitor_v1_0">
+		</DisplayName>
+		<Description value="pcie_monitor_v1_0">
+		</Description>
+		<SupportsRdiCustomization value="true">
+		</SupportsRdiCustomization>
+		<SupportsRdiGeneration value="true">
+		</SupportsRdiGeneration>
+		<NativeOnly value="true">
+		</NativeOnly>
+		<ComponentPath value="xilinx.com_user_pcie_monitor_1.0/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="kintex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="/BaseIP">
+			</Taxonomy>
+		</Taxonomies>
+		<Interfaces>
+			<Interface value="AXI4-Stream">
+			</Interface>
+		</Interfaces>
+	</IP>
+	<IP>
+		<VLNV value="xilinx.com:user:perf_app_mux:1.0">
+		</VLNV>
+		<DisplayName value="perf_app_mux_v1_0">
+		</DisplayName>
+		<Description value="perf_app_mux_v1_0">
+		</Description>
+		<SupportsRdiCustomization value="true">
+		</SupportsRdiCustomization>
+		<SupportsRdiGeneration value="true">
+		</SupportsRdiGeneration>
+		<NativeOnly value="true">
+		</NativeOnly>
+		<ComponentPath value="xilinx.com_user_perf_app_mux_1.0/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="kintex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="/BaseIP">
+			</Taxonomy>
+		</Taxonomies>
+	</IP>
+	<IP>
+		<VLNV value="xilinx.com:user:reset_top:1.0">
+		</VLNV>
+		<DisplayName value="reset_top_v1_0">
+		</DisplayName>
+		<Description value="reset_top_v1_0">
+		</Description>
+		<SupportsRdiCustomization value="true">
+		</SupportsRdiCustomization>
+		<SupportsRdiGeneration value="true">
+		</SupportsRdiGeneration>
+		<NativeOnly value="true">
+		</NativeOnly>
+		<ComponentPath value="xilinx.com_user_reset_top_1.0/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="kintex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="/BaseIP">
+			</Taxonomy>
+		</Taxonomies>
+	</IP>
+	<IP>
+		<VLNV value="xilinx.com:user:user_led:1.0">
+		</VLNV>
+		<DisplayName value="user_led_v1_0">
+		</DisplayName>
+		<Description value="user_led_v1_0">
+		</Description>
+		<SupportsRdiCustomization value="true">
+		</SupportsRdiCustomization>
+		<SupportsRdiGeneration value="true">
+		</SupportsRdiGeneration>
+		<NativeOnly value="true">
+		</NativeOnly>
+		<ComponentPath value="xilinx.com_user_user_led_1.0/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="kintex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="/BaseIP">
+			</Taxonomy>
+		</Taxonomies>
+	</IP>
+	<IP>
+		<VLNV value="xilinx.com:ip:pcie_7x:2.0">
+		</VLNV>
+		<DisplayName value="7 Series Integrated Block for PCI Express">
+		</DisplayName>
+		<Description value="The Xilinx 7 Series Integrated Block for PCI Express (1-lane, 2-lane, 4-lane, and 8-lane) uses the 7-Series Integrated Hard IP Block for PCI Express in conjunction with flexible 7-Series architectural features to implement a PCI Express Base Specification v2.1 compliant PCI Express Endpoint or Root Port. Unique features of the LogiCORE Block for PCI Express are the high performance AXI Interface, optimal buffering for high bandwidth applications, and BAR checking and filtering.">
+		</Description>
+		<ProductGuide value="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=pcie_7x;v=v2_0;d=pg054-7series-pcie.pdf">
+		</ProductGuide>
+		<VersionInfo value="doc/pcie_7x_v2_0_changelog.txt">
+		</VersionInfo>
+		<SupportsRdiCustomization value="true">
+		</SupportsRdiCustomization>
+		<SupportsRdiGeneration value="true">
+		</SupportsRdiGeneration>
+		<NativeOnly value="true">
+		</NativeOnly>
+		<CoreRevision value="128000">
+		</CoreRevision>
+		<ComponentPath value="pcie_7x_v2_0/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="zynq">
+				<Part status="Pre-Production" name="xc7z030ffg676-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030ffg676-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030ffg676-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030fbg676-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030fbg676-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030fbg676-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030fbg484-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030fbg484-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030fbg484-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030fbg484e-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030fbg484e-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030fbg484e-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030fbg676e-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030fbg676e-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030fbg676e-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030ff999-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030ff999-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030ff999-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030die-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030die-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030die-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030ffg676e-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030ffg676e-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030ffg676e-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045fbg676-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045fbg676-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045fbg676-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg900-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg900-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg900-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg676-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg676-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg676-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg900e-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg900e-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg900e-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg676e-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg676e-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg676e-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ff999-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ff999-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ff999-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045fbg676e-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045fbg676e-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045fbg676e-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045die-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045die-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045die-3">
+				</Part>
+			</Family>
+			<Family name="virtex7">
+				<Part status="Production" name="xc7vx485tffg1157-1">
+				</Part>
+				<Part status="Production" name="xc7vx485tffg1157-2">
+				</Part>
+				<Part status="Production" name="xc7vx485tffg1157-2L">
+				</Part>
+				<Part status="Production" name="xc7vx485tffg1157-3">
+				</Part>
+				<Part status="Production" name="xc7vx485tffg1158-1">
+				</Part>
+				<Part status="Production" name="xc7vx485tffg1158-2">
+				</Part>
+				<Part status="Production" name="xc7vx485tffg1158-2L">
+				</Part>
+				<Part status="Production" name="xc7vx485tffg1158-3">
+				</Part>
+				<Part status="Production" name="xc7vx485tffg1761-1">
+				</Part>
+				<Part status="Production" name="xc7vx485tffg1761-2">
+				</Part>
+				<Part status="Production" name="xc7vx485tffg1761-2L">
+				</Part>
+				<Part status="Production" name="xc7vx485tffg1761-3">
+				</Part>
+				<Part status="Production" name="xc7vx485tffg1927-1">
+				</Part>
+				<Part status="Production" name="xc7vx485tffg1927-2">
+				</Part>
+				<Part status="Production" name="xc7vx485tffg1927-2L">
+				</Part>
+				<Part status="Production" name="xc7vx485tffg1927-3">
+				</Part>
+				<Part status="Production" name="xc7vx485tffg1930-1">
+				</Part>
+				<Part status="Production" name="xc7vx485tffg1930-2">
+				</Part>
+				<Part status="Production" name="xc7vx485tffg1930-2L">
+				</Part>
+				<Part status="Production" name="xc7vx485tffg1930-3">
+				</Part>
+				<Part status="Production" name="xc7vx485tdie-1">
+				</Part>
+				<Part status="Production" name="xc7vx485tdie-2">
+				</Part>
+				<Part status="Production" name="xc7vx485tdie-2L">
+				</Part>
+				<Part status="Production" name="xc7vx485tdie-3">
+				</Part>
+				<Part status="Production" name="xc7vx485tff999-1">
+				</Part>
+				<Part status="Production" name="xc7vx485tff999-2">
+				</Part>
+				<Part status="Production" name="xc7vx485tff999-2L">
+				</Part>
+				<Part status="Production" name="xc7vx485tff999-3">
+				</Part>
+				<Part status="Production" name="xc7v2000tmdie-1">
+				</Part>
+				<Part status="Production" name="xc7v2000tmdie-2">
+				</Part>
+				<Part status="Production" name="xc7v2000tmdie-2G">
+				</Part>
+				<Part status="Production" name="xc7v2000tmdie-2L">
+				</Part>
+				<Part status="Production" name="xc7v2000tfhg1761-1">
+				</Part>
+				<Part status="Production" name="xc7v2000tfhg1761-2">
+				</Part>
+				<Part status="Production" name="xc7v2000tfhg1761-2G">
+				</Part>
+				<Part status="Production" name="xc7v2000tfhg1761-2L">
+				</Part>
+				<Part status="Production" name="xc7v2000tflg1925-1">
+				</Part>
+				<Part status="Production" name="xc7v2000tflg1925-2">
+				</Part>
+				<Part status="Production" name="xc7v2000tflg1925-2G">
+				</Part>
+				<Part status="Production" name="xc7v2000tflg1925-2L">
+				</Part>
+				<Part status="Production" name="xc7v2000tdie-1">
+				</Part>
+				<Part status="Production" name="xc7v2000tdie-2">
+				</Part>
+				<Part status="Production" name="xc7v2000tdie-2G">
+				</Part>
+				<Part status="Production" name="xc7v2000tdie-2L">
+				</Part>
+				<Part status="Production" name="xc7v2000tff999-1">
+				</Part>
+				<Part status="Production" name="xc7v2000tff999-2">
+				</Part>
+				<Part status="Production" name="xc7v2000tff999-2G">
+				</Part>
+				<Part status="Production" name="xc7v2000tff999-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7v585tffg1761-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7v585tffg1761-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7v585tffg1761-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7v585tffg1761-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7v585tffg1157-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7v585tffg1157-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7v585tffg1157-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7v585tffg1157-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7v585tff999-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7v585tff999-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7v585tff999-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7v585tff999-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7v585tdie-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7v585tdie-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7v585tdie-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7v585tdie-3">
+				</Part>
+			</Family>
+			<Family name="artix7">
+				<Part status="Production" name="xc7a100tfgg676-1">
+				</Part>
+				<Part status="Production" name="xc7a100tfgg676-2">
+				</Part>
+				<Part status="Production" name="xc7a100tfgg676-2L">
+				</Part>
+				<Part status="Production" name="xc7a100tfgg676-3">
+				</Part>
+				<Part status="Production" name="xc7a200tffg1156-1">
+				</Part>
+				<Part status="Production" name="xc7a200tffg1156-2">
+				</Part>
+				<Part status="Production" name="xc7a200tffg1156-2L">
+				</Part>
+				<Part status="Production" name="xc7a200tffg1156-3">
+				</Part>
+				<Part status="Production" name="xc7a200tfbg676-1">
+				</Part>
+				<Part status="Production" name="xc7a200tfbg676-2">
+				</Part>
+				<Part status="Production" name="xc7a200tfbg676-2L">
+				</Part>
+				<Part status="Production" name="xc7a200tfbg676-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7a100tfgg484-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7a100tfgg484-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7a100tfgg484-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7a100tfgg484-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7a200tfbg484-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7a200tfbg484-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7a200tfbg484-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7a200tfbg484-3">
+				</Part>
+			</Family>
+			<Family name="kintex7">
+				<Part status="Production" name="xc7k70tfbg676-1">
+				</Part>
+				<Part status="Production" name="xc7k70tfbg676-2">
+				</Part>
+				<Part status="Production" name="xc7k70tfbg676-2L">
+				</Part>
+				<Part status="Production" name="xc7k70tfbg676-3">
+				</Part>
+				<Part status="Production" name="xc7k70tfbg484-1">
+				</Part>
+				<Part status="Production" name="xc7k70tfbg484-2">
+				</Part>
+				<Part status="Production" name="xc7k70tfbg484-2L">
+				</Part>
+				<Part status="Production" name="xc7k70tfbg484-3">
+				</Part>
+				<Part status="Production" name="xc7k70tff999-1">
+				</Part>
+				<Part status="Production" name="xc7k70tff999-2">
+				</Part>
+				<Part status="Production" name="xc7k70tff999-2L">
+				</Part>
+				<Part status="Production" name="xc7k70tff999-3">
+				</Part>
+				<Part status="Production" name="xc7k70tdie-1">
+				</Part>
+				<Part status="Production" name="xc7k70tdie-2">
+				</Part>
+				<Part status="Production" name="xc7k70tdie-2L">
+				</Part>
+				<Part status="Production" name="xc7k70tdie-3">
+				</Part>
+				<Part status="Production" name="xc7k160tffg676-1">
+				</Part>
+				<Part status="Production" name="xc7k160tffg676-2">
+				</Part>
+				<Part status="Production" name="xc7k160tffg676-2L">
+				</Part>
+				<Part status="Production" name="xc7k160tffg676-3">
+				</Part>
+				<Part status="Production" name="xc7k160tfbg484-1">
+				</Part>
+				<Part status="Production" name="xc7k160tfbg484-2">
+				</Part>
+				<Part status="Production" name="xc7k160tfbg484-2L">
+				</Part>
+				<Part status="Production" name="xc7k160tfbg484-3">
+				</Part>
+				<Part status="Production" name="xc7k160tfbg676-1">
+				</Part>
+				<Part status="Production" name="xc7k160tfbg676-2">
+				</Part>
+				<Part status="Production" name="xc7k160tfbg676-2L">
+				</Part>
+				<Part status="Production" name="xc7k160tfbg676-3">
+				</Part>
+				<Part status="Production" name="xc7k160tdie-1">
+				</Part>
+				<Part status="Production" name="xc7k160tdie-2">
+				</Part>
+				<Part status="Production" name="xc7k160tdie-2L">
+				</Part>
+				<Part status="Production" name="xc7k160tdie-3">
+				</Part>
+				<Part status="Production" name="xc7k160tff999-1">
+				</Part>
+				<Part status="Production" name="xc7k160tff999-2">
+				</Part>
+				<Part status="Production" name="xc7k160tff999-2L">
+				</Part>
+				<Part status="Production" name="xc7k160tff999-3">
+				</Part>
+				<Part status="Production" name="xc7k325tffg676-1">
+				</Part>
+				<Part status="Production" name="xc7k325tffg676-2">
+				</Part>
+				<Part status="Production" name="xc7k325tffg676-2L">
+				</Part>
+				<Part status="Production" name="xc7k325tffg676-3">
+				</Part>
+				<Part status="Production" name="xc7k325tffg900-1">
+				</Part>
+				<Part status="Production" name="xc7k325tffg900-2">
+				</Part>
+				<Part status="Production" name="xc7k325tffg900-2L">
+				</Part>
+				<Part status="Production" name="xc7k325tffg900-3">
+				</Part>
+				<Part status="Production" name="xc7k325tfbg676-1">
+				</Part>
+				<Part status="Production" name="xc7k325tfbg676-2">
+				</Part>
+				<Part status="Production" name="xc7k325tfbg676-2L">
+				</Part>
+				<Part status="Production" name="xc7k325tfbg676-3">
+				</Part>
+				<Part status="Production" name="xc7k325tfbg900-1">
+				</Part>
+				<Part status="Production" name="xc7k325tfbg900-2">
+				</Part>
+				<Part status="Production" name="xc7k325tfbg900-2L">
+				</Part>
+				<Part status="Production" name="xc7k325tfbg900-3">
+				</Part>
+				<Part status="Production" name="xc7k325tdie-1">
+				</Part>
+				<Part status="Production" name="xc7k325tdie-2">
+				</Part>
+				<Part status="Production" name="xc7k325tdie-2L">
+				</Part>
+				<Part status="Production" name="xc7k325tdie-3">
+				</Part>
+				<Part status="Production" name="xc7k325tff999-1">
+				</Part>
+				<Part status="Production" name="xc7k325tff999-2">
+				</Part>
+				<Part status="Production" name="xc7k325tff999-2L">
+				</Part>
+				<Part status="Production" name="xc7k325tff999-3">
+				</Part>
+				<Part status="Production" name="xc7k355tffg901-1">
+				</Part>
+				<Part status="Production" name="xc7k355tffg901-2">
+				</Part>
+				<Part status="Production" name="xc7k355tffg901-2L">
+				</Part>
+				<Part status="Production" name="xc7k355tffg901-3">
+				</Part>
+				<Part status="Production" name="xc7k355tdie-1">
+				</Part>
+				<Part status="Production" name="xc7k355tdie-2">
+				</Part>
+				<Part status="Production" name="xc7k355tdie-2L">
+				</Part>
+				<Part status="Production" name="xc7k355tdie-3">
+				</Part>
+				<Part status="Production" name="xc7k355tff999-1">
+				</Part>
+				<Part status="Production" name="xc7k355tff999-2">
+				</Part>
+				<Part status="Production" name="xc7k355tff999-2L">
+				</Part>
+				<Part status="Production" name="xc7k355tff999-3">
+				</Part>
+				<Part status="Production" name="xc7k410tffg900-1">
+				</Part>
+				<Part status="Production" name="xc7k410tffg900-2">
+				</Part>
+				<Part status="Production" name="xc7k410tffg900-2L">
+				</Part>
+				<Part status="Production" name="xc7k410tffg900-3">
+				</Part>
+				<Part status="Production" name="xc7k410tffg676-1">
+				</Part>
+				<Part status="Production" name="xc7k410tffg676-2">
+				</Part>
+				<Part status="Production" name="xc7k410tffg676-2L">
+				</Part>
+				<Part status="Production" name="xc7k410tffg676-3">
+				</Part>
+				<Part status="Production" name="xc7k410tfbg900-1">
+				</Part>
+				<Part status="Production" name="xc7k410tfbg900-2">
+				</Part>
+				<Part status="Production" name="xc7k410tfbg900-2L">
+				</Part>
+				<Part status="Production" name="xc7k410tfbg900-3">
+				</Part>
+				<Part status="Production" name="xc7k410tfbg676-1">
+				</Part>
+				<Part status="Production" name="xc7k410tfbg676-2">
+				</Part>
+				<Part status="Production" name="xc7k410tfbg676-2L">
+				</Part>
+				<Part status="Production" name="xc7k410tfbg676-3">
+				</Part>
+				<Part status="Production" name="xc7k410tdie-1">
+				</Part>
+				<Part status="Production" name="xc7k410tdie-2">
+				</Part>
+				<Part status="Production" name="xc7k410tdie-2L">
+				</Part>
+				<Part status="Production" name="xc7k410tdie-3">
+				</Part>
+				<Part status="Production" name="xc7k410tff999-1">
+				</Part>
+				<Part status="Production" name="xc7k410tff999-2">
+				</Part>
+				<Part status="Production" name="xc7k410tff999-2L">
+				</Part>
+				<Part status="Production" name="xc7k410tff999-3">
+				</Part>
+				<Part status="Production" name="xc7k420tffg1156-1">
+				</Part>
+				<Part status="Production" name="xc7k420tffg1156-2">
+				</Part>
+				<Part status="Production" name="xc7k420tffg1156-2L">
+				</Part>
+				<Part status="Production" name="xc7k420tffg1156-3">
+				</Part>
+				<Part status="Production" name="xc7k420tffg901-1">
+				</Part>
+				<Part status="Production" name="xc7k420tffg901-2">
+				</Part>
+				<Part status="Production" name="xc7k420tffg901-2L">
+				</Part>
+				<Part status="Production" name="xc7k420tffg901-3">
+				</Part>
+				<Part status="Production" name="xc7k420tdie-1">
+				</Part>
+				<Part status="Production" name="xc7k420tdie-2">
+				</Part>
+				<Part status="Production" name="xc7k420tdie-2L">
+				</Part>
+				<Part status="Production" name="xc7k420tdie-3">
+				</Part>
+				<Part status="Production" name="xc7k420tff999-1">
+				</Part>
+				<Part status="Production" name="xc7k420tff999-2">
+				</Part>
+				<Part status="Production" name="xc7k420tff999-2L">
+				</Part>
+				<Part status="Production" name="xc7k420tff999-3">
+				</Part>
+				<Part status="Production" name="xc7k480tffg1156-1">
+				</Part>
+				<Part status="Production" name="xc7k480tffg1156-2">
+				</Part>
+				<Part status="Production" name="xc7k480tffg1156-2L">
+				</Part>
+				<Part status="Production" name="xc7k480tffg1156-3">
+				</Part>
+				<Part status="Production" name="xc7k480tffg901-1">
+				</Part>
+				<Part status="Production" name="xc7k480tffg901-2">
+				</Part>
+				<Part status="Production" name="xc7k480tffg901-2L">
+				</Part>
+				<Part status="Production" name="xc7k480tffg901-3">
+				</Part>
+				<Part status="Production" name="xc7k480tdie-1">
+				</Part>
+				<Part status="Production" name="xc7k480tdie-2">
+				</Part>
+				<Part status="Production" name="xc7k480tdie-2L">
+				</Part>
+				<Part status="Production" name="xc7k480tdie-3">
+				</Part>
+				<Part status="Production" name="xc7k480tff999-1">
+				</Part>
+				<Part status="Production" name="xc7k480tff999-2">
+				</Part>
+				<Part status="Production" name="xc7k480tff999-2L">
+				</Part>
+				<Part status="Production" name="xc7k480tff999-3">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="/Standard_Bus_Interfaces/PCI_Express">
+			</Taxonomy>
+		</Taxonomies>
+		<UpgradesFrom>
+			<Upgrade value="xilinx.com:ip:pcie_7x:1.8">
+			</Upgrade>
+		</UpgradesFrom>
+	</IP>
+	<IP>
+		<VLNV value="xilinx.com:ip:axis_interconnect:1.1">
+		</VLNV>
+		<DisplayName value="AXI4-Stream Interconnect">
+		</DisplayName>
+		<Description value="The AXI4-Stream Interconnect IP provides the infrastructure to connect multiple AXI4-Stream masters and slaves.  The configurable interconnect features a 16x16 switch, data FIFOs, register slices, data width converters and clock rate converters.">
+		</Description>
+		<ProductGuide value="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axis_interconnect;v=v1_1;d=pg035_axis_interconnect.pdf">
+		</ProductGuide>
+		<VersionInfo value="doc/axis_interconnect_v1_1_changelog.txt">
+		</VersionInfo>
+		<SupportsRdiCustomization value="true">
+		</SupportsRdiCustomization>
+		<SupportsRdiGeneration value="true">
+		</SupportsRdiGeneration>
+		<NativeOnly value="true">
+		</NativeOnly>
+		<CoreRevision value="128000">
+		</CoreRevision>
+		<ComponentPath value="axis_interconnect_v1_1/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="qartix7">
+				<Part status="Pre-Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="artix7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="artix7l">
+				<Part status="Pre-Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="kintex7l">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="qkintex7l">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="qzynq">
+				<Part status="Pre-Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="azynq">
+				<Part status="Pre-Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="qvirtex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="qkintex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="zynq">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="virtex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="kintex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="aartix7">
+				<Part status="Pre-Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="qartix7l">
+				<Part status="Pre-Production" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="/AXI_Infrastructure">
+			</Taxonomy>
+		</Taxonomies>
+		<UpgradesFrom>
+			<Upgrade value="xilinx.com:ip:axis_interconnect:1.0">
+			</Upgrade>
+		</UpgradesFrom>
+		<Interfaces>
+			<Interface value="AXI4-Stream">
+			</Interface>
+		</Interfaces>
+		<VendorURL value="http://www.xilinx.com">
+		</VendorURL>
+		<Documents>
+			<Document value="doc/pg035_axis_interconnect.pdf" displayName="pg035_axis_interconnect.pdf" fileType="PDF file">
+			</Document>
+			<Document value="doc/axis_interconnect_v1_1_changelog.txt" displayName="axis_interconnect_v1_1_changelog.txt" fileType="Text file">
+			</Document>
+		</Documents>
+		<DesignToolContexts>
+			<DesignTool value="Vivado">
+			</DesignTool>
+		</DesignToolContexts>
+	</IP>
+	<IP>
+		<VLNV value="xilinx.com:ip:axi_vfifo_ctrl:2.0">
+		</VLNV>
+		<DisplayName value="AXI Virtual FIFO Controller">
+		</DisplayName>
+		<Description value="The AXI Virtual FIFO Controller is a parameterizable number of multi channel FIFO.">
+		</Description>
+		<ProductGuide value="http://www.xilinx.com/cgi-bin/docs/ipdoc?l=en;c=axi_vfifo_ctrl;v=v2_0;d=pg038_axi_vfifo_ctrl.pdf">
+		</ProductGuide>
+		<VersionInfo value="doc/axi_vfifo_ctrl_v2_0_changelog.txt">
+		</VersionInfo>
+		<SupportsRdiCustomization value="true">
+		</SupportsRdiCustomization>
+		<SupportsRdiGeneration value="true">
+		</SupportsRdiGeneration>
+		<NativeOnly value="true">
+		</NativeOnly>
+		<CoreRevision value="128000">
+		</CoreRevision>
+		<ComponentPath value="axi_vfifo_ctrl_v2_0/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="qartix7">
+				<Part status="Beta" name="ALL">
+				</Part>
+			</Family>
+			<Family name="artix7">
+				<Part status="Beta" name="ALL">
+				</Part>
+			</Family>
+			<Family name="artix7l">
+				<Part status="Beta" name="ALL">
+				</Part>
+			</Family>
+			<Family name="kintex7l">
+				<Part status="Beta" name="ALL">
+				</Part>
+			</Family>
+			<Family name="qkintex7l">
+				<Part status="Beta" name="ALL">
+				</Part>
+			</Family>
+			<Family name="qzynq">
+				<Part status="Beta" name="ALL">
+				</Part>
+			</Family>
+			<Family name="azynq">
+				<Part status="Beta" name="ALL">
+				</Part>
+			</Family>
+			<Family name="qvirtex7">
+				<Part status="Beta" name="ALL">
+				</Part>
+			</Family>
+			<Family name="qkintex7">
+				<Part status="Beta" name="ALL">
+				</Part>
+			</Family>
+			<Family name="zynq">
+				<Part status="Beta" name="ALL">
+				</Part>
+			</Family>
+			<Family name="virtex7">
+				<Part status="Beta" name="ALL">
+				</Part>
+			</Family>
+			<Family name="kintex7">
+				<Part status="Beta" name="ALL">
+				</Part>
+			</Family>
+			<Family name="aartix7">
+				<Part status="Beta" name="ALL">
+				</Part>
+			</Family>
+			<Family name="qartix7l">
+				<Part status="Beta" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="/AXI_Infrastructure">
+			</Taxonomy>
+		</Taxonomies>
+		<UpgradesFrom>
+			<Upgrade value="xilinx.com:ip:axi_vfifo_ctrl:1.1">
+			</Upgrade>
+		</UpgradesFrom>
+		<Interfaces>
+			<Interface value="AXI4-Stream">
+			</Interface>
+			<Interface value="AXI4">
+			</Interface>
+		</Interfaces>
+	</IP>
+	<IP>
+		<VLNV value="xilinx.com:ip:ten_gig_eth_pcs_pma:3.0">
+		</VLNV>
+		<DisplayName value="Ten Gigabit Ethernet PCS/PMA (10GBASE-R/KR)">
+		</DisplayName>
+		<Description value="The Xilinx Ten Gigabit Ethernet PCS/PMA (10GBASE-R) core is designed to the IEEE specification 802.3 2008. An example design and development scripts are provided to accelerate your design cycle. For 10GBASE-KR interest, please contact your local Xilinx sales representative.">
+		</Description>
+		<Datasheet value="doc/pg068-ten-gig-eth-pcs-pma.pdf">
+		</Datasheet>
+		<ProductGuide value="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=ten_gig_eth_pcs_pma;v=v3_0;d=pg068-ten-gig-eth-pcs-pma.pdf">
+		</ProductGuide>
+		<VersionInfo value="doc/ten_gig_eth_pcs_pma_v3_0_changelog.txt">
+		</VersionInfo>
+		<SupportsRdiCustomization value="true">
+		</SupportsRdiCustomization>
+		<SupportsRdiGeneration value="true">
+		</SupportsRdiGeneration>
+		<NativeOnly value="true">
+		</NativeOnly>
+		<CoreRevision value="128000">
+		</CoreRevision>
+		<ComponentPath value="ten_gig_eth_pcs_pma_v3_0/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="zynq">
+				<Part status="Pre-Production" name="xc7z030ffg676-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030ffg676-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030ffg676e-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030ffg676e-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg900-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg900-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg676-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg676-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg900e-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg900e-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg676e-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg676e-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z100ffg900-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z100ffg1156-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z100ffg900e-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z100ffg1156e-2">
+				</Part>
+			</Family>
+			<Family name="kintex7">
+				<Part status="Pre-Production" name="xc7k160tffg676-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7k160tffg676-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7k160tffg676-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7k325tffg676-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7k325tffg676-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7k325tffg676-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7k325tffg900-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7k325tffg900-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7k325tffg900-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7k355tffg901-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7k355tffg901-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7k355tffg901-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7k410tffg900-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7k410tffg900-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7k410tffg900-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7k410tffg676-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7k410tffg676-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7k410tffg676-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7k420tffg1156-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7k420tffg1156-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7k420tffg1156-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7k420tffg901-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7k420tffg901-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7k420tffg901-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7k480tffg1156-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7k480tffg1156-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7k480tffg1156-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7k480tffg901-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7k480tffg901-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7k480tffg901-3">
+				</Part>
+			</Family>
+			<Family name="virtex7">
+				<Part status="Pre-Production" name="xc7vx485tffg1157-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx485tffg1157-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx485tffg1157-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx485tffg1158-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx485tffg1158-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx485tffg1158-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx485tffg1761-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx485tffg1761-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx485tffg1761-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx485tffg1927-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx485tffg1927-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx485tffg1927-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx485tffg1930-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx485tffg1930-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx485tffg1930-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx485tdie-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx485tdie-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx485tdie-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx485tff999-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx485tff999-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx485tff999-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx330tffg1157-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx330tffg1157-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx330tffg1157-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx330tffg1761-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx330tffg1761-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx330tffg1761-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx330tdie-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx330tdie-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx330tdie-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx330tff999-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx330tff999-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx330tff999-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx415tffg1157-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx415tffg1157-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx415tffg1157-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx415tffg1158-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx415tffg1158-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx415tffg1158-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx415tffg1927-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx415tffg1927-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx415tffg1927-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx415tdie-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx415tdie-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx415tdie-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx415tff999-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx415tff999-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx415tff999-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7v585tffg1761-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7v585tffg1761-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7v585tffg1761-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7v585tffg1157-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7v585tffg1157-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7v585tffg1157-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7v585tff999-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7v585tff999-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7v585tff999-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7v585tdie-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7v585tdie-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7v585tdie-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7vh580thcg1155-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vh580thcg1155-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vh580thcg1931-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vh580thcg1931-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vh580thcg1932-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vh580thcg1932-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vh580tff999-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vh580tff999-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vh580tdie-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vh580tdie-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx550tffg1158-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx550tffg1158-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx550tffg1158-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx550tffg1927-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx550tffg1927-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx550tffg1927-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx550tdie-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx550tdie-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx550tdie-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx550tff999-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx550tff999-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx550tff999-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx690tffg1157-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx690tffg1157-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx690tffg1157-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx690tffg1158-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx690tffg1158-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx690tffg1158-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx690tffg1761-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx690tffg1761-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx690tffg1761-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx690tffg1926-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx690tffg1926-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx690tffg1926-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx690tffg1927-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx690tffg1927-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx690tffg1927-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx690tffg1930-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx690tffg1930-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx690tffg1930-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx690tdie-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx690tdie-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx690tdie-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx690tff999-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx690tff999-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx690tff999-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7vh870thcg1931-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vh870thcg1931-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vh870thcg1932-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vh870thcg1932-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vh870tdie-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vh870tdie-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vh870tff999-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vh870tff999-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx980tffg1926-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx980tffg1926-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx980tffg1928-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx980tffg1928-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx980tffg1930-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx980tffg1930-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx980tdie-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx980tdie-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx980tff999-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx980tff999-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx1140tflg1926-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx1140tflg1926-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx1140tflg1928-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx1140tflg1928-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx1140tflg1930-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx1140tflg1930-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx1140tdie-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx1140tdie-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx1140tff999-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7vx1140tff999-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7v2000tmdie-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7v2000tmdie-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7v2000tfhg1761-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7v2000tfhg1761-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7v2000tflg1925-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7v2000tflg1925-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7v2000tdie-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7v2000tdie-2L">
+				</Part>
+				<Part status="Pre-Production" name="xc7v2000tff999-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7v2000tff999-2L">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="/Communication_&amp;_Networking/Ethernet">
+			</Taxonomy>
+			<Taxonomy value="/Communication_&amp;_Networking/Networking">
+			</Taxonomy>
+			<Taxonomy value="/Communication_&amp;_Networking/Telecommunications">
+			</Taxonomy>
+		</Taxonomies>
+		<Licensing>
+			<LicenseKeys>
+				<LicenseKey value="ten_gig_eth_pcs_pma@2013.03">
+				</LicenseKey>
+				<LicenseKey value="ten_gig_eth_pcs_pma_basekr@2013.03">
+				</LicenseKey>
+			</LicenseKeys>
+			<PaymentRequired value="true">
+			</PaymentRequired>
+		</Licensing>
+	</IP>
+	<IP>
+		<VLNV value="xilinx.com:ip:ten_gig_eth_mac:12.0">
+		</VLNV>
+		<DisplayName value="Ten Gigabit Ethernet MAC">
+		</DisplayName>
+		<Description value="The 10 Gigabit Ethernet Media Access Controller (XGMAC) LogiCORE provides a 32-bit Ten Gigabit Media Independent Interface (XGMII) to provide up to 10 gigabits per second (Gbps) total bandwidth. Operating with an internal clock speed of 156.25MHz, the core supports LAN/WAN mode operation and is designed to the IEEE 802.3-2008 standard specification. In addition, it provides support for VLAN and JUMBO frames . It also provides optional network management features including statistics gathering and flow control. The core can be configured and monitored through a AXI Streaming interface.   In addition, the core is designed to seamlessly connect to the XAUI LogiCORE, RXAUI LogiCore and the 10-Gigabit Ethernet PCS/PMA via the XGMII interface.">
+		</Description>
+		<ProductGuide value="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=ten_gig_eth_mac;v=v12_0;d=pg072-ten-gig-eth-mac.pdf">
+		</ProductGuide>
+		<VersionInfo value="doc/ten_gig_eth_mac_v12_0_changelog.txt">
+		</VersionInfo>
+		<SupportsRdiCustomization value="true">
+		</SupportsRdiCustomization>
+		<SupportsRdiGeneration value="true">
+		</SupportsRdiGeneration>
+		<NativeOnly value="true">
+		</NativeOnly>
+		<CoreRevision value="128000">
+		</CoreRevision>
+		<ComponentPath value="ten_gig_eth_mac_v12_0/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="zynq">
+				<Part status="Pre-Production" name="xc7z030ffg676-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030ffg676-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030ffg676-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030fbg676-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030fbg676-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030fbg676-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030fbg484-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030fbg484-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030fbg484-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030fbg484e-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030fbg484e-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030fbg484e-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030fbg676e-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030fbg676e-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030fbg676e-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030ff999-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030ff999-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030ff999-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030die-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030die-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030die-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030ffg676e-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030ffg676e-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z030ffg676e-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045fbg676-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045fbg676-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045fbg676-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg900-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg900-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg900-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg676-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg676-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg676-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg900e-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg900e-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg900e-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg676e-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg676e-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ffg676e-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ff999-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ff999-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045ff999-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045fbg676e-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045fbg676e-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045fbg676e-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045die-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045die-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z045die-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7z100ffg900-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z100ffg900-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z100ffg1156-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z100ffg1156-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z100die-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z100die-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z100ff999-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z100ff999-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z100ffg900e-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z100ffg900e-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7z100ffg1156e-1">
+				</Part>
+				<Part status="Pre-Production" name="xc7z100ffg1156e-2">
+				</Part>
+			</Family>
+			<Family name="kintex7">
+				<Part status="Pre-Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="artix7">
+				<Part status="Pre-Production" name="xc7a000tdie-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7a000tdie-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7a100tcsg324-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7a100tcsg324-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7a100tfgg484-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7a100tfgg484-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7a100tfgg676-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7a100tfgg676-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7a100tftg256-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7a100tftg256-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7a100tdie-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7a100tdie-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7a100tff999-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7a100tff999-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7a200tsbg484-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7a200tsbg484-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7a200tffg1156-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7a200tffg1156-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7a200tfbg676-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7a200tfbg676-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7a200tfbg484-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7a200tfbg484-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7a200tff999-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7a200tff999-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7a200tdie-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7a200tdie-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7a350tfbg484-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7a350tfbg484-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7a350tfbg676-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7a350tfbg676-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7a350tffg1156-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7a350tffg1156-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7a350tdie-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7a350tdie-3">
+				</Part>
+				<Part status="Pre-Production" name="xc7a350tff999-2">
+				</Part>
+				<Part status="Pre-Production" name="xc7a350tff999-3">
+				</Part>
+			</Family>
+			<Family name="virtex7">
+				<Part status="Pre-Production" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="/Communication_&amp;_Networking/Ethernet">
+			</Taxonomy>
+			<Taxonomy value="/Communication_&amp;_Networking/Networking">
+			</Taxonomy>
+			<Taxonomy value="/Communication_&amp;_Networking/Telecommunications">
+			</Taxonomy>
+		</Taxonomies>
+		<Licensing>
+			<LicenseKeys>
+				<LicenseKey value="ten_gig_eth_mac@2013.03">
+				</LicenseKey>
+			</LicenseKeys>
+			<PaymentRequired value="true">
+			</PaymentRequired>
+		</Licensing>
+		<Interfaces>
+			<Interface value="AXI4-Stream">
+			</Interface>
+			<Interface value="AXI4">
+			</Interface>
+		</Interfaces>
+	</IP>
+	<IP>
+		<VLNV value="xilinx.com:user:rx_interface:1.0">
+		</VLNV>
+		<DisplayName value="rx_interface_v1_0">
+		</DisplayName>
+		<Description value="rx_interface_v1_0">
+		</Description>
+		<SupportsRdiCustomization value="true">
+		</SupportsRdiCustomization>
+		<SupportsRdiGeneration value="true">
+		</SupportsRdiGeneration>
+		<NativeOnly value="true">
+		</NativeOnly>
+		<ComponentPath value="xilinx.com_user_rx_interface_1.0/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="kintex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="/BaseIP">
+			</Taxonomy>
+		</Taxonomies>
+	</IP>
+	<IP>
+		<VLNV value="xilinx.com:user:axi_stream_gen_check:1.0">
+		</VLNV>
+		<DisplayName value="axi_stream_gen_check_v1_0">
+		</DisplayName>
+		<Description value="axi_stream_gen_check_v1_0">
+		</Description>
+		<SupportsRdiCustomization value="true">
+		</SupportsRdiCustomization>
+		<SupportsRdiGeneration value="true">
+		</SupportsRdiGeneration>
+		<NativeOnly value="true">
+		</NativeOnly>
+		<ComponentPath value="xilinx.com_user_axi_stream_gen_check_1.0/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="kintex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="/BaseIP">
+			</Taxonomy>
+		</Taxonomies>
+	</IP>
+	<IP>
+		<VLNV value="xilinx.com:user:kc705_power_test:1.0">
+		</VLNV>
+		<DisplayName value="kc705_power_test_v1_0">
+		</DisplayName>
+		<Description value="kc705_power_test_v1_0">
+		</Description>
+		<SupportsRdiCustomization value="true">
+		</SupportsRdiCustomization>
+		<SupportsRdiGeneration value="true">
+		</SupportsRdiGeneration>
+		<NativeOnly value="true">
+		</NativeOnly>
+		<ComponentPath value="xilinx.com_user_kc705_power_test_1.0/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="kintex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="/BaseIP">
+			</Taxonomy>
+		</Taxonomies>
+	</IP>
+	<IP>
+		<VLNV value="xilinx.com:user:network_path_logic:1.0">
+		</VLNV>
+		<DisplayName value="network_path_logic_v1_0">
+		</DisplayName>
+		<Description value="network_path_logic_v1_0">
+		</Description>
+		<SupportsRdiCustomization value="true">
+		</SupportsRdiCustomization>
+		<SupportsRdiGeneration value="true">
+		</SupportsRdiGeneration>
+		<NativeOnly value="true">
+		</NativeOnly>
+		<ComponentPath value="xilinx.com_user_network_path_logic_1.0/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="kintex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="/BaseIP">
+			</Taxonomy>
+		</Taxonomies>
+	</IP>
+	<IP>
+		<VLNV value="xilinx.com:user:axi_vfifo_control:1.0">
+		</VLNV>
+		<DisplayName value="axi_vfifo_control_v1_0">
+		</DisplayName>
+		<Description value="axi_vfifo_control_v1_0">
+		</Description>
+		<SupportsRdiCustomization value="true">
+		</SupportsRdiCustomization>
+		<SupportsRdiGeneration value="true">
+		</SupportsRdiGeneration>
+		<NativeOnly value="true">
+		</NativeOnly>
+		<ComponentPath value="xilinx.com_user_axi_vfifo_control_1.0/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="kintex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="/BaseIP">
+			</Taxonomy>
+		</Taxonomies>
+	</IP>
+	<IP>
+		<VLNV value="xilinx.com:user:packet_dma_axi:1.0">
+		</VLNV>
+		<DisplayName value="packet_dma_axi_v1_0">
+		</DisplayName>
+		<Description value="packet_dma_axi_v1_0">
+		</Description>
+		<SupportsRdiCustomization value="true">
+		</SupportsRdiCustomization>
+		<SupportsRdiGeneration value="true">
+		</SupportsRdiGeneration>
+		<NativeOnly value="true">
+		</NativeOnly>
+		<ComponentPath value="xilinx.com_user_packet_dma_axi_1.0/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="kintex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="/BaseIP">
+			</Taxonomy>
+		</Taxonomies>
+		<Interfaces>
+			<Interface value="AXI4">
+			</Interface>
+			<Interface value="AXI4-Stream">
+			</Interface>
+		</Interfaces>
+	</IP>
+	<IP>
+		<VLNV value="xilinx.com:user:pcie_pl_control:1.0">
+		</VLNV>
+		<DisplayName value="pcie_pl_control_v1_0">
+		</DisplayName>
+		<Description value="pcie_pl_control_v1_0">
+		</Description>
+		<SupportsRdiCustomization value="true">
+		</SupportsRdiCustomization>
+		<SupportsRdiGeneration value="true">
+		</SupportsRdiGeneration>
+		<NativeOnly value="true">
+		</NativeOnly>
+		<ComponentPath value="xilinx.com_user_pcie_pl_control_1.0/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="kintex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="/BaseIP">
+			</Taxonomy>
+		</Taxonomies>
+	</IP>
+	<IP>
+		<VLNV value="xilinx.com:user:xgbaser_gt_same_quad_wrapper:1.0">
+		</VLNV>
+		<DisplayName value="xgbaser_gt_same_quad_wrapper_v1_0">
+		</DisplayName>
+		<Description value="xgbaser_gt_same_quad_wrapper_v1_0">
+		</Description>
+		<SupportsRdiCustomization value="true">
+		</SupportsRdiCustomization>
+		<SupportsRdiGeneration value="true">
+		</SupportsRdiGeneration>
+		<NativeOnly value="true">
+		</NativeOnly>
+		<ComponentPath value="xilinx.com_user_xgbaser_gt_same_quad_wrapper_1.0/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="kintex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="/BaseIP">
+			</Taxonomy>
+		</Taxonomies>
+	</IP>
+	<IP>
+		<VLNV value="xilinx.com:user:pcie_x8gen2_axi_st_ip_pipe_clock:1.0">
+		</VLNV>
+		<DisplayName value="pcie_x8gen2_axi_st_ip_pipe_clock_v1_0">
+		</DisplayName>
+		<Description value="pcie_x8gen2_axi_st_ip_pipe_clock_v1_0">
+		</Description>
+		<SupportsRdiCustomization value="true">
+		</SupportsRdiCustomization>
+		<SupportsRdiGeneration value="true">
+		</SupportsRdiGeneration>
+		<NativeOnly value="true">
+		</NativeOnly>
+		<ComponentPath value="xilinx.com_user_pcie_x8gen2_axi_st_ip_pipe_clock_1.0/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="kintex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="/BaseIP">
+			</Taxonomy>
+		</Taxonomies>
+	</IP>
+	<IP>
+		<VLNV value="xilinx.com:user:user_registers_slave:1.0">
+		</VLNV>
+		<DisplayName value="user_registers_slave_v1_0">
+		</DisplayName>
+		<Description value="user_registers_slave_v1_0">
+		</Description>
+		<SupportsRdiCustomization value="true">
+		</SupportsRdiCustomization>
+		<SupportsRdiGeneration value="true">
+		</SupportsRdiGeneration>
+		<NativeOnly value="true">
+		</NativeOnly>
+		<ComponentPath value="xilinx.com_user_user_registers_slave_1.0/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="kintex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="/BaseIP">
+			</Taxonomy>
+		</Taxonomies>
+		<Interfaces>
+			<Interface value="AXI4">
+			</Interface>
+		</Interfaces>
+	</IP>
+<IP>
+    <VLNV value="xilinx.com:user:axis_interconnect:1.1">
+    </VLNV>
+    <DisplayName value="axis_interconnect_v1_1">
+    </DisplayName>
+    <Description value="axis_interconnect_v1_1">
+    </Description>
+    <SupportsRdiCustomization value="true">
+    </SupportsRdiCustomization>
+    <SupportsRdiGeneration value="true">
+    </SupportsRdiGeneration>
+    <NativeOnly value="true">
+    </NativeOnly>
+    <ComponentPath value="axis_interconnect_v1_1/component.xml">
+    </ComponentPath>
+    <Families>
+      <Family name="kintex7">
+        <Part status="Production" name="ALL">
+        </Part>
+      </Family>
+    </Families>
+    <Taxonomies>
+      <Taxonomy value="/BaseIP">
+      </Taxonomy>
+    </Taxonomies>
+    </IP>
+</Index>
+

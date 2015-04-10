@@ -1,0 +1,1 @@
+KERNEL=="pcietest*"		MODE="0666"
