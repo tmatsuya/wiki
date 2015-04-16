@@ -118,7 +118,7 @@ function usage {
 	exit 0
 }
 
-GETOPT=`getopt -q -o ab:t:h -- "$@"` ; [ $? != 0 ] && usage
+GETOPT=`getopt -q -o ab:t:h: -- "$@"` ; [ $? != 0 ] && usage
 eval set -- "$GETOPT"
 while true
 do
