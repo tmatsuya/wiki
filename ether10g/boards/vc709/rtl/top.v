@@ -14,7 +14,7 @@ module top (
 	// 156.25 MHz clock in
 	input wire xphy_refclk_clk_p,
 	input wire xphy_refclk_clk_n,
-	  // 10G PHY ports
+	// 10G PHY ports
 	output wire xphy0_txp,
 	output wire xphy0_txn,
 	input wire xphy0_rxp,
@@ -70,18 +70,6 @@ always @(posedge clk_ref_200) begin
 end
 
 assign sys_rst = cold_reset; // | button_c;
-
-wire clksi570;
-IBUFDS IBUFDS_0 (
-	.I(si570_refclk_p),
-	.IB(si570_refclk_n),
-	.O(clksi570)
-);
-OBUFDS OBUFDS_0 (
-	.I(clksi570),
-	.O(user_sma_clock_p),
-	.OB(user_sma_clock_n)
-);
 
 // -------------------
 // -- Local Signals --
@@ -178,6 +166,17 @@ clock_control cc_inst (
 	.clk50(clk50)
 );
 `endif
+wire clksi570;
+IBUFDS IBUFDS_0 (
+	.I(si570_refclk_p),
+	.IB(si570_refclk_n),
+	.O(clksi570)
+);
+OBUFDS OBUFDS_0 (
+	.I(clksi570),
+	.O(user_sma_clock_p),
+	.OB(user_sma_clock_n)
+);
 
  
 `ifdef SIMULATION
