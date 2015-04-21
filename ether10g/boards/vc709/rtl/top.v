@@ -354,8 +354,8 @@ app app_inst (
 	.xgmii_clk(xgemac_clk_156),
 	.xgmii_txd(xgmii_txd),
 	.xgmii_txc(xgmii_txc),
-	.xgmii_rxd(xgmii_rxd_3),
-	.xgmii_rxc(xgmii_rxc_3),
+	.xgmii_rxd(xgmii_rxd_0),
+	.xgmii_rxc(xgmii_rxc_0),
 	.xphy_status(xphy0_status),
 	// BUTTON
 	.button_n(button_n),
@@ -375,8 +375,8 @@ app app_inst (
 //- Disable Laser when unconnected on SFP+
 assign sfp_tx_disable = 4'b0000;
 
-//assign xgmii_txc_0 = 8'hff;
-//assign xgmii_txd_0 = 64'h07070707_07070707;
+assign xgmii_txc_0 = xgmii_txc;
+assign xgmii_txd_0 = xgmii_txd;
 `ifdef ENABLE_XGMII1
 assign xgmii_txc_1 = xgmii_txc;
 assign xgmii_txd_1 = xgmii_txd;
