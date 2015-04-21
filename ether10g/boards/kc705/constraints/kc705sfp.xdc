@@ -111,13 +111,13 @@ set_property IOSTANDARD LVCMOS25 [get_ports {dipsw[1]}]
 set_property IOSTANDARD LVCMOS25 [get_ports {dipsw[0]}]
 
 
-#create_clock -period 5.000 -name clk_ref_p [get_ports clk_ref_p]
+create_clock -period 5.000 -name clk_ref_p [get_ports clk_ref_p]
 
-#set_property IOSTANDARD DIFF_SSTL15 [get_ports clk_ref_n]
+set_property IOSTANDARD DIFF_SSTL15 [get_ports clk_ref_n]
 
-#set_property IOSTANDARD DIFF_SSTL15 [get_ports clk_ref_p]
-#set_property PACKAGE_PIN AD12 [get_ports clk_ref_p]
-#set_property PACKAGE_PIN AD11 [get_ports clk_ref_n]
+set_property IOSTANDARD DIFF_SSTL15 [get_ports clk_ref_p]
+set_property PACKAGE_PIN AD12 [get_ports clk_ref_p]
+set_property PACKAGE_PIN AD11 [get_ports clk_ref_n]
 
 # Domain Crossing Constraints
 #create_clock -name userclk2 -period 4.0 [get_nets user_clk]
@@ -185,4 +185,31 @@ set_clock_groups -name async_txoutclk_refclk -asynchronous -group [get_clocks -i
 #set_max_delay -datapath_only -from [get_pins user_reset_i/C] -to [get_pins user_reg_slave_inst/kc705_pvt_monitor/test_controller/processor/run_flop/D] 10.000
 
 #set_max_delay -datapath_only -from [get_pins user_reset_i/C] -to [get_pins user_reg_slave_inst/rst_r_reg/PRE] 10.000
+
+# 156.25 MHz clock control LOCs
+set_property IOSTANDARD LVCMOS25 [get_ports i2c_clk]
+set_property SLEW SLOW [get_ports i2c_clk]
+set_property DRIVE 16 [get_ports i2c_clk]
+set_property PULLUP TRUE [get_ports i2c_clk]
+set_property PACKAGE_PIN K21  [get_ports i2c_clk]
+
+set_property IOSTANDARD LVCMOS25 [get_ports i2c_data]
+set_property SLEW SLOW [get_ports i2c_data]
+set_property DRIVE 16 [get_ports i2c_data]
+set_property PULLUP TRUE [get_ports i2c_data]
+set_property PACKAGE_PIN L21  [get_ports i2c_data]
+
+set_property IOSTANDARD LVCMOS25 [get_ports i2c_mux_rst_n]
+set_property SLEW SLOW [get_ports i2c_mux_rst_n]
+set_property DRIVE 16 [get_ports i2c_mux_rst_n]
+set_property PACKAGE_PIN P23  [get_ports i2c_mux_rst_n]
+
+set_property IOSTANDARD LVCMOS25 [get_ports si5324_rst_n]
+set_property SLEW SLOW [get_ports si5324_rst_n]
+set_property DRIVE 16 [get_ports si5324_rst_n]
+set_property PACKAGE_PIN AE20 [get_ports si5324_rst_n]
+
+##GT Ref clk
+set_property PACKAGE_PIN L8  [get_ports xphy_refclk_clk_p]
+set_property PACKAGE_PIN L7  [get_ports xphy_refclk_clk_n]
 

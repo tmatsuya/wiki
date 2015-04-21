@@ -2,6 +2,17 @@
 `include "setup.v"
 
 module top (
+	// 200MHz reference clock input
+	input wire clk_ref_p,
+	input wire clk_ref_n,
+	//-SI5324 I2C programming interface
+	inout wire i2c_clk,
+	inout wire i2c_data,
+	output wire i2c_mux_rst_n,
+	output wire si5324_rst_n,
+	// 156.25 MHz clock in
+	input wire xphy_refclk_clk_p,
+	input wire xphy_refclk_clk_n,
 	// SI570 user clock (input 156.25MHz)
 	input wire si570_refclk_p,
 	input wire si570_refclk_n,
@@ -15,7 +26,7 @@ module top (
 	output wire xphy_txn, 
 	input wire xphy_rxp, 
 	input wire xphy_rxn,
-        output wire sfp_tx_disable,
+	output wire sfp_tx_disable,
 	// BUTTON
 	input wire button_n,
 	input wire button_s,
@@ -29,9 +40,60 @@ module top (
 );
 
 // Clock and Reset
+wire clk_ref_200, clk_ref_200_i;
 wire sys_rst;
-assign sys_rst = button_c; // 1'b0;
 
+reg [7:0] cold_counter = 8'h0;
+reg cold_reset = 1'b0;
+
+always @(posedge clk_ref_200) begin
+	if (cold_counter != 8'hff) begin
+		cold_reset <= 1'b1;
+		cold_counter <= cold_counter + 8'd1;
+	end else
+		cold_reset <= 1'b0;
+end
+
+assign sys_rst = cold_reset; // | button_c;
+
+IBUFGDS # (
+	.DIFF_TERM    ("TRUE"),
+	.IBUF_LOW_PWR ("FALSE")
+) diff_clk_200 (
+	.I    (clk_ref_p  ),
+	.IB   (clk_ref_n  ),
+	.O    (clk_ref_200_i )
+);
+
+BUFG u_bufg_clk_ref (
+	.O (clk_ref_200),
+	.I (clk_ref_200_i)
+);
+
+wire [11:0]     device_temp;
+wire	 	clk50;
+reg [1:0]       clk_divide = 2'b00;
+
+
+always @(posedge clk_ref_200)
+	clk_divide  <= clk_divide + 1'b1;
+
+BUFG buffer_clk50 (
+	.I    (clk_divide[1]),
+	.O    (clk50    )
+);
+
+`ifdef USE_SI5324
+//-SI 5324 programming
+clock_control cc_inst (
+	.i2c_clk(i2c_clk),
+	.i2c_data(i2c_data),
+	.i2c_mux_rst_n(i2c_mux_rst_n),
+	.si5324_rst_n(si5324_rst_n),
+	.rst(sys_rst),
+	.clk50(clk50)
+);
+`endif
 wire clksi570;
 IBUFDS IBUFDS_0 (
 	.I(si570_refclk_p),
@@ -178,7 +240,7 @@ network_path network_path_inst_0 (
 	.xgmii_txc(xgmii_txc),
 	.xgmii_rxd(xgmii_rxd),
 	.xgmii_rxc(xgmii_rxc),
-        .sim_speedup_control(sim_speedup_control),
+	.sim_speedup_control(sim_speedup_control),
 `ifdef BOARD_REV10
 	.polarity(1'b1)	// 1:KC705 Rev.1.0, see http://japan.xilinx.com/support/answers/46614.html
 `else
@@ -188,8 +250,13 @@ network_path network_path_inst_0 (
 
 xgbaser_gt_same_quad_wrapper xgbaser_gt_wrapper_inst_0 (
 	.areset(sys_rst),
+`ifdef USE_SI5324
+	.refclk_p(xphy_refclk_clk_p),
+	.refclk_n(xphy_refclk_clk_n),
+`else
 	.refclk_p(sma_mgt_refclk_p),
 	.refclk_n(sma_mgt_refclk_n),
+`endif
 	.txclk322(txclk322),
 	.gt0_tx_resetdone(xphy_tx_resetdone),
 	.gt1_tx_resetdone(),

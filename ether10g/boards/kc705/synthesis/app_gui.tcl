@@ -30,6 +30,10 @@ read_verilog "../rtl/top.v"
 read_verilog "../rtl/app.v"
 read_verilog "../../../cores/xgmiisync/rtl/xgmiisync.v"
 read_verilog "../../../cores/crc32/rtl/CRC32_D64.v"
+read_vhdl "../rtl/clock_control/clock_control.vhd"
+read_vhdl "../rtl/clock_control/clock_control_program.vhd"
+read_vhdl "../rtl/clock_control/kcpsm6.vhd"
+
 
 
 # NGC files
