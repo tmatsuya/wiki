@@ -141,14 +141,17 @@ module network_path (
   assign drp_drpdo_i = drp_drpdo_o;
 
 ten_gig_eth_pcs_pma_ip  ten_gig_eth_pcs_pma_inst (
-     .clk156(clk156),
+//     .clk156(clk156),
+     .coreclk(clk156),
      .dclk(dclk),
      .txusrclk(txusrclk),
      .txusrclk2(txusrclk2),
      .areset(sys_rst),
-     .txclk322(txclk322),
+//     .txclk322(txclk322),
+     .txoutclk(txclk322),
      //.areset_refclk_bufh(areset_refclk_bufh),
-     .areset_clk156(areset_clk156),
+//     .areset_clk156(areset_clk156),
+     .areset_coreclk(areset_clk156),
      //.mmcm_locked_clk156(mmcm_locked_clk156),
      //.gttxreset_txusrclk2(gttxreset_txusrclk2),
      .gttxreset(gttxreset),
