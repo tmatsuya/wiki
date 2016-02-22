@@ -236,7 +236,11 @@ module  pcie_app_7vx#(
 
   input                                      user_clk,
   input                                      user_reset,
-  input                                      user_lnk_up
+  input                                      user_lnk_up,
+
+	input wire [7:0] dipsw,
+	output wire [7:0] led
+
 );
 
 

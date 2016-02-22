@@ -1,72 +1,15 @@
-//-----------------------------------------------------------------------------
-//
-// (c) Copyright 2012-2012 Xilinx, Inc. All rights reserved.
-//
-// This file contains confidential and proprietary information
-// of Xilinx, Inc. and is protected under U.S. and
-// international copyright and other intellectual property
-// laws.
-//
-// DISCLAIMER
-// This disclaimer is not a license and does not grant any
-// rights to the materials distributed herewith. Except as
-// otherwise provided in a valid license issued to you by
-// Xilinx, and to the maximum extent permitted by applicable
-// law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
-// WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
-// AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
-// BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
-// INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
-// (2) Xilinx shall not be liable (whether in contract or tort,
-// including negligence, or under any other theory of
-// liability) for any loss or damage of any kind or nature
-// related to, arising under or in connection with these
-// materials, including for any direct, or any indirect,
-// special, incidental, or consequential loss or damage
-// (including loss of data, profits, goodwill, or any type of
-// loss or damage suffered as a result of any action brought
-// by a third party) even if such damage or loss was
-// reasonably foreseeable or Xilinx had been advised of the
-// possibility of the same.
-//
-// CRITICAL APPLICATIONS
-// Xilinx products are not designed or intended to be fail-
-// safe, or for use in any application requiring fail-safe
-// performance, such as life-support or safety devices or
-// systems, Class III medical devices, nuclear facilities,
-// applications related to the deployment of airbags, or any
-// other applications that could lead to death, personal
-// injury, or severe property or environmental damage
-// (individually and collectively, "Critical
-// Applications"). Customer assumes the sole risk and
-// liability of any use of Xilinx products in Critical
-// Applications, subject only to applicable laws and
-// regulations governing limitations on product liability.
-//
-// THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
-// PART OF THIS FILE AT ALL TIMES.
-//
-//-----------------------------------------------------------------------------
-//
-// Project    : Virtex-7 FPGA Gen3 Integrated Block for PCI Express
-// File       : xilinx_pcie_3_0_7vx_ep.v
-// Version    : 4.1
-//--
-//-- Description:  PCI Express Endpoint example FPGA design
-//--
-//------------------------------------------------------------------------------
-
+`include "../rtl/setup.v"
 `timescale 1ps / 1ps
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module top # (
-  parameter          PL_SIM_FAST_LINK_TRAINING           = "FALSE",      // Simulation Speedup
-  parameter          PCIE_EXT_CLK                        = "TRUE", // Use External Clocking Module
-  parameter          PCIE_EXT_GT_COMMON                  = "FALSE", // Use External GT COMMON Module
-  parameter          C_DATA_WIDTH                        = 256,         // RX/TX interface data width
-  parameter          KEEP_WIDTH                          = C_DATA_WIDTH / 32,
+	parameter          PL_SIM_FAST_LINK_TRAINING           = "FALSE",      // Simulation Speedup
+	parameter          PCIE_EXT_CLK                        = "TRUE", // Use External Clocking Module
+	parameter          PCIE_EXT_GT_COMMON                  = "FALSE", // Use External GT COMMON Module
+	parameter          C_DATA_WIDTH                        = 256,         // RX/TX interface data width
+	parameter          KEEP_WIDTH                          = C_DATA_WIDTH / 32,
  // parameter          EXT_PIPE_SIM                        = "FALSE",  // This Parameter has effect on selecting Enable External PIPE Interface in GUI.
-  parameter          PL_LINK_CAP_MAX_LINK_SPEED          = 4,  // 1- GEN1, 2 - GEN2, 4 - GEN3
-  parameter          PL_LINK_CAP_MAX_LINK_WIDTH          = 8,  // 1- X1, 2 - X2, 4 - X4, 8 - X8
+	parameter          PL_LINK_CAP_MAX_LINK_SPEED          = 4,  // 1- GEN1, 2 - GEN2, 4 - GEN3
+	parameter          PL_LINK_CAP_MAX_LINK_WIDTH          = 8,  // 1- X1, 2 - X2, 4 - X4, 8 - X8
   // USER_CLK2_FREQ = AXI Interface Frequency
   //   0: Disable User Clock
   //   1: 31.25 MHz
@@ -74,31 +17,37 @@ module top # (
   //   3: 125.00 MHz
   //   4: 250.00 MHz
   //   5: 500.00 MHz
-  parameter  integer USER_CLK2_FREQ                 = 4,
-  parameter          REF_CLK_FREQ                   = 0,           // 0 - 100 MHz, 1 - 125 MHz,  2 - 250 MHz
-  parameter          AXISTEN_IF_RQ_ALIGNMENT_MODE   = "FALSE",
-  parameter          AXISTEN_IF_CC_ALIGNMENT_MODE   = "FALSE",
-  parameter          AXISTEN_IF_CQ_ALIGNMENT_MODE   = "FALSE",
-  parameter          AXISTEN_IF_RC_ALIGNMENT_MODE   = "FALSE",
-  parameter          AXISTEN_IF_ENABLE_CLIENT_TAG   = 0,
-  parameter          AXISTEN_IF_RQ_PARITY_CHECK     = 0,
-  parameter          AXISTEN_IF_CC_PARITY_CHECK     = 0,
-  parameter          AXISTEN_IF_MC_RX_STRADDLE      = 0,
-  parameter          AXISTEN_IF_ENABLE_RX_MSG_INTFC = 0,
-  parameter   [17:0] AXISTEN_IF_ENABLE_MSG_ROUTE    = 18'h2FFFF
+	parameter  integer USER_CLK2_FREQ                 = 4,
+	parameter          REF_CLK_FREQ                   = 0,           // 0 - 100 MHz, 1 - 125 MHz,  2 - 250 MHz
+	parameter          AXISTEN_IF_RQ_ALIGNMENT_MODE   = "FALSE",
+	parameter          AXISTEN_IF_CC_ALIGNMENT_MODE   = "FALSE",
+	parameter          AXISTEN_IF_CQ_ALIGNMENT_MODE   = "FALSE",
+	parameter          AXISTEN_IF_RC_ALIGNMENT_MODE   = "FALSE",
+	parameter          AXISTEN_IF_ENABLE_CLIENT_TAG   = 0,
+	parameter          AXISTEN_IF_RQ_PARITY_CHECK     = 0,
+	parameter          AXISTEN_IF_CC_PARITY_CHECK     = 0,
+	parameter          AXISTEN_IF_MC_RX_STRADDLE      = 0,
+	parameter          AXISTEN_IF_ENABLE_RX_MSG_INTFC = 0,
+	parameter   [17:0] AXISTEN_IF_ENABLE_MSG_ROUTE    = 18'h2FFFF
 ) (
-  output  [(PL_LINK_CAP_MAX_LINK_WIDTH - 1) : 0]  pci_exp_txp,
-  output  [(PL_LINK_CAP_MAX_LINK_WIDTH - 1) : 0]  pci_exp_txn,
-  input   [(PL_LINK_CAP_MAX_LINK_WIDTH - 1) : 0]  pci_exp_rxp,
-  input   [(PL_LINK_CAP_MAX_LINK_WIDTH - 1) : 0]  pci_exp_rxn,
+	output  [(PL_LINK_CAP_MAX_LINK_WIDTH - 1) : 0]  pci_exp_txp,
+	output  [(PL_LINK_CAP_MAX_LINK_WIDTH - 1) : 0]  pci_exp_txn,
+	input   [(PL_LINK_CAP_MAX_LINK_WIDTH - 1) : 0]  pci_exp_rxp,
+	input   [(PL_LINK_CAP_MAX_LINK_WIDTH - 1) : 0]  pci_exp_rxn,
 
-  output                                          led_0,
-  output                                          led_1,
-  output                                          led_2,
-  output                                          led_3,
-  input                                           sys_clk_p,
-  input                                           sys_clk_n,
-  input                                           sys_rst_n
+	input                                           sys_clk_p,
+	input                                           sys_clk_n,
+	input                                           sys_rst_n,
+
+        input wire clk200_p,
+        input wire clk200_n,
+        input wire button_n,
+        input wire button_s,
+        input wire button_w,
+        input wire button_e,
+        input wire button_c,
+        input wire [7:0] dipsw,
+        output wire [7:0] led
 );
 
   // Local Parameters derived from user selection
@@ -268,7 +217,28 @@ module top # (
   wire                              [2:0]    cfg_interrupt_msi_function_number;
 
 
+// Clock and Reset
+wire clk200;
+IBUFDS IBUFDS_clk200 (
+        .I(clk200_p),
+        .IB(clk200_n),
+        .O(clk200)
+);
 
+reg [7:0] cold_counter = 8'h0;
+reg cold_reset = 1'b0;
+
+always @(posedge clk200) begin
+        if (cold_counter != 8'hff) begin
+                cold_reset <= 1'b1;
+                cold_counter <= cold_counter + 8'd1;
+        end else
+                cold_reset <= 1'b0;
+end
+
+wire sys_rst;
+
+assign sys_rst = (button_c | cold_reset | ~user_lnk_up | user_reset);
 
 
   //----------------------------------------------------------------------------------------------------------------//
@@ -290,10 +260,12 @@ module top # (
 
 
     // LED's enabled for Reference Board design
-    OBUF   led_0_obuf (.O(led_0), .I(sys_rst_n_c));
-    OBUF   led_1_obuf (.O(led_1), .I(!user_reset));
-    OBUF   led_2_obuf (.O(led_2), .I(user_lnk_up));
-    OBUF   led_3_obuf (.O(led_3), .I(user_clk_heartbeat[25]));
+`ifdef macchan
+    OBUF   led_0_obuf (.O(led[0]), .I(sys_rst_n_c));
+    OBUF   led_1_obuf (.O(led[1]), .I(!user_reset));
+    OBUF   led_2_obuf (.O(led[2]), .I(user_lnk_up));
+    OBUF   led_3_obuf (.O(led[3]), .I(user_clk_heartbeat[25]));
+`endif
 
   // Create a Clock Heartbeat
   always @(posedge user_clk) begin
@@ -695,8 +667,10 @@ pcie3_7x_0_support_i (
 
     .user_clk                                       ( user_clk ),
     .user_reset                                     ( user_reset ),
-    .user_lnk_up                                    ( user_lnk_up )
+    .user_lnk_up                                    ( user_lnk_up ),
 
+	.dipsw(dipsw),
+	.led(led)
   );
 
 endmodule
