@@ -146,7 +146,7 @@ module PIO_TX_ENGINE    #(
   input                  [15:0]  req_rid,
   input                   [7:0]  req_tag,
   input                   [7:0]  req_be,
-  input                  [12:0]  req_addr,
+  input                  [15:0]  req_addr,
   input                   [1:0]  req_at,
 
   input                  [15:0]  completer_id,
@@ -167,7 +167,7 @@ module PIO_TX_ENGINE    #(
 
   // PIO Memory Access Control Interface
 
-  output reg             [10:0]  rd_addr,
+  output reg             [13:0]  rd_addr,
   output reg              [3:0]  rd_be,
   output reg                     trn_sent,
   input                  [31:0]  rd_data,
@@ -231,16 +231,16 @@ module PIO_TX_ENGINE    #(
   always @ (posedge user_clk)begin
 
      if (!reset_n) begin
-        rd_addr  <=  #TCQ 11'b0;
+        rd_addr  <=  #TCQ 14'b0;
 	rd_be    <=  #TCQ 4'b0;
      end
      else if(req_compl_wd) begin
         if(dword_count == 0) begin
-	   rd_addr  <= #TCQ req_addr[12:2];
+	   rd_addr  <= #TCQ req_addr[15:2];
 	   rd_be    <= #TCQ req_be[3:0];
 	end
 	else begin
-	   rd_addr  <= #TCQ req_addr[12:2] + 11'h001;
+	   rd_addr  <= #TCQ req_addr[15:2] + 14'h001;
 	   rd_be    <= #TCQ req_be[7:4];
 	end
      end

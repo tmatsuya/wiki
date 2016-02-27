@@ -390,7 +390,10 @@ PIO #(
 
   .user_clk                                       ( user_clk ),
   .reset_n                                        ( ~user_reset ),
-  .user_lnk_up                                    ( user_lnk_up )
+  .user_lnk_up                                    ( user_lnk_up ),
+
+	.dipsw(dipsw),
+	.led(led)
 
  );
   //--------------------------------------------------------------------------------------------------------------------//

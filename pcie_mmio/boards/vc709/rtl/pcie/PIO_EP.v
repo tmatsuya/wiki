@@ -185,17 +185,20 @@ module PIO_EP #(
   output wire             [31:0]   cfg_interrupt_msix_data,
 
   output                           req_completion,
-  output                           completion_done
+  output                           completion_done,
+
+	input [7:0] dipsw,
+	output [7:0] led
 
 );
 
   // Local wires
 
-  wire  [10:0]      rd_addr;
+  wire  [13:0]      rd_addr;
   wire  [3:0]       rd_be;
   wire  [31:0]      rd_data;
 
-  wire  [10:0]      wr_addr;
+  wire  [13:0]      wr_addr;
   wire  [7:0]       wr_be;
   wire  [63:0]      wr_data;
   wire              wr_en;
@@ -214,7 +217,7 @@ module PIO_EP #(
   wire  [15:0]      req_rid;
   wire  [7:0]       req_tag;
   wire  [7:0]       req_be;
-  wire  [12:0]      req_addr;
+  wire  [15:0]      req_addr;
   wire  [1:0]       req_at;
   wire              trn_sent;
 
@@ -264,8 +267,10 @@ module PIO_EP #(
     .gen_msix_intr(gen_msix_intr),
     .gen_msi_intr(gen_msi_intr),
     .gen_leg_intr(gen_leg_intr),
-    .gen_transaction(gen_transaction)
+    .gen_transaction(gen_transaction),
 
+	.dipsw(dipsw),
+	.led(led)
   );
 
   //
