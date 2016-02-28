@@ -59,7 +59,7 @@ set_property PACKAGE_PIN BB31 [get_ports {dipsw[7]}]
 set_property IOSTANDARD LVCMOS18 [get_ports {dipsw[7]}]
 set_property PACKAGE_PIN AV30 [get_ports {dipsw[0]}]
 set_property IOSTANDARD LVCMOS18 [get_ports {dipsw[0]}]
-3NET  No Connect                LOC = AR30 | IOSTANDARD=LVCMOS18; # Bank  13 VCCO - VCC1V8_FPGA - IO_L19P_T3_13
+#NET  No Connect                LOC = AR30 | IOSTANDARD=LVCMOS18; # Bank  13 VCCO - VCC1V8_FPGA - IO_L19P_T3_13
 set_property PACKAGE_PIN AM36 [get_ports FLASH_D0]
 set_property IOSTANDARD LVCMOS18 [get_ports FLASH_D0]
 set_property PACKAGE_PIN AN36 [get_ports FLASH_D1]
