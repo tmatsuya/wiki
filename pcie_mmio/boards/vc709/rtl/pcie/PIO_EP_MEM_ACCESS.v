@@ -378,6 +378,19 @@ module PIO_EP_MEM_ACCESS #(
                     {rd_be[1] ? rd_data_raw_o[15:08] : 8'h0},
                     {rd_be[0] ? rd_data_raw_o[07:00] : 8'h0}};
 
+// BIOS ROM
+wire [31:0] bios_data;
+biosrom biosrom_0 (
+        .clk(user_clk),
+        .en(1'b1),
+        .addr(rd_addr[8:0]),
+        .data({bios_data[7:0], bios_data[15:8], bios_data[23:16], bios_data[31:24]})
+);
+assign rd_data0_o = bios_data;
+assign rd_data1_o = bios_data;
+assign rd_data2_o = bios_data;
+assign rd_data3_o = 32'hffffffff; //bios_data;
+
 `ifndef NO
   EP_MEM EP_MEM    (
 
@@ -385,7 +398,7 @@ module PIO_EP_MEM_ACCESS #(
 
                     .a_rd_a_i_0(rd_addr[11:0]),              // I [8:0]
                     .a_rd_en_i_0(rd_data0_en),                // I [1:0]
-                    .a_rd_d_o_0(rd_data0_o),                  // O [31:0]
+//                    .a_rd_d_o_0(rd_data0_o),                  // O [31:0]
 
                     .b_wr_a_i_0(wr_addr_inc[11:0]),              // I [8:0]
                     .b_wr_d_i_0(post_wr_data),                // I [31:0]
@@ -395,7 +408,7 @@ module PIO_EP_MEM_ACCESS #(
 
                     .a_rd_a_i_1(rd_addr[11:0]),              // I [8:0]
                     .a_rd_en_i_1(rd_data1_en),                // I [1:0]
-                    .a_rd_d_o_1(rd_data1_o),                  // O [31:0]
+  //                  .a_rd_d_o_1(rd_data1_o),                  // O [31:0]
 
                     .b_wr_a_i_1(wr_addr_inc[11:0]),              // [8:0]
                     .b_wr_d_i_1(post_wr_data),                // [31:0]
@@ -405,7 +418,7 @@ module PIO_EP_MEM_ACCESS #(
 
                     .a_rd_a_i_2(rd_addr[11:0]),              // I [8:0]
                     .a_rd_en_i_2(rd_data2_en),                // I [1:0]
-                    .a_rd_d_o_2(rd_data2_o),                  // O [31:0]
+//                    .a_rd_d_o_2(rd_data2_o),                  // O [31:0]
 
                     .b_wr_a_i_2(wr_addr_inc[11:0]),              // I [8:0]
                     .b_wr_d_i_2(post_wr_data),                // I [31:0]
@@ -415,7 +428,7 @@ module PIO_EP_MEM_ACCESS #(
 
                     .a_rd_a_i_3(rd_addr[11:0]),              // [8:0]
                     .a_rd_en_i_3(rd_data3_en),                // [1:0]
-                    .a_rd_d_o_3(rd_data3_o),                  // O [31:0]
+//                    .a_rd_d_o_3(rd_data3_o),                  // O [31:0]
 
                     .b_wr_a_i_3(wr_addr_inc[11:0]),              // I [8:0]
                     .b_wr_d_i_3(post_wr_data),                // I [31:0]
