@@ -118,7 +118,10 @@ set_false_path -to [get_ports -filter {NAME=~led_*}]
 # with these devices that contain only 1.8 V banks.
 #
 
+# if VC709 board, sys_rst_n(pcie) LOC=AV35
 set_property LOC AV35 [get_ports sys_rst_n]
+# if SUME board, sys_rst_n(pcie) LOC=AY35
+#set_property LOC AY35 [get_ports sys_rst_n]
 set_property IOSTANDARD LVCMOS18 [get_ports sys_rst_n]
 set_property PULLUP true [get_ports sys_rst_n]
 
