@@ -273,56 +273,56 @@ module PIO_EP_MEM_ACCESS #(
   end
 
 
-  always @(posedge user_clk)
-  begin
-    if(!reset_n)
-    begin
-      gen_transaction <= #TCQ 1'b0;
-      gen_leg_intr    <= #TCQ 1'b0;
-      gen_msi_intr    <= #TCQ 1'b0;
-      gen_msix_intr   <= #TCQ 1'b0;
-   end
-   else begin
-     case(wr_addr)
-
-       PIO_MRD_TR_GEN_REG : begin
-
-         if(wr_data[31:0] == 32'hAAAA_BBBB && !trn_sent && wr_en)
-           gen_transaction <= #TCQ 1'b1;
-         else
-           gen_transaction <= #TCQ 1'b0;
-
-       end // PIO_MRD_TR_GEN_REG
-
-       PIO_INTR_GEN_REG : begin
-
-         if(wr_data[31:0] == 32'hCCCC_DDDD && wr_en)
-           gen_leg_intr  <= #TCQ 1'b1;
-         else if (wr_data[31:0] == 32'hEEEE_FFFF && wr_en)
-           gen_msi_intr  <= #TCQ 1'b1;
-         else if (wr_data[31:0] == 32'hDEAD_BEEF && wr_en)
-           gen_msix_intr <= #TCQ 1'b1;
-         else begin
-           gen_leg_intr  <= #TCQ 1'b0;
-           gen_msi_intr  <= #TCQ 1'b0;
-           gen_msix_intr <= #TCQ 1'b0;
-         end
-
-       end //PIO_INTR_GEN_REG
-
-       default : begin
-
-         gen_transaction <= #TCQ 1'b0;
-         gen_leg_intr    <= #TCQ 1'b0;
-         gen_msi_intr    <= #TCQ 1'b0;
-         gen_msix_intr   <= #TCQ 1'b0;
-
-       end
-
-     endcase
-
-   end
-  end
+//  always @(posedge user_clk)
+//  begin
+//    if(!reset_n)
+//    begin
+//      gen_transaction <= #TCQ 1'b0;
+//      gen_leg_intr    <= #TCQ 1'b0;
+//      gen_msi_intr    <= #TCQ 1'b0;
+//      gen_msix_intr   <= #TCQ 1'b0;
+//   end
+//   else begin
+//     case(wr_addr)
+//
+//       PIO_MRD_TR_GEN_REG : begin
+//
+//         if(wr_data[31:0] == 32'hAAAA_BBBB && !trn_sent && wr_en)
+//           gen_transaction <= #TCQ 1'b1;
+//         else
+//           gen_transaction <= #TCQ 1'b0;
+//
+//       end // PIO_MRD_TR_GEN_REG
+//
+//       PIO_INTR_GEN_REG : begin
+//
+//         if(wr_data[31:0] == 32'hCCCC_DDDD && wr_en)
+//           gen_leg_intr  <= #TCQ 1'b1;
+//         else if (wr_data[31:0] == 32'hEEEE_FFFF && wr_en)
+//           gen_msi_intr  <= #TCQ 1'b1;
+//         else if (wr_data[31:0] == 32'hDEAD_BEEF && wr_en)
+//           gen_msix_intr <= #TCQ 1'b1;
+//         else begin
+//           gen_leg_intr  <= #TCQ 1'b0;
+//           gen_msi_intr  <= #TCQ 1'b0;
+//           gen_msix_intr <= #TCQ 1'b0;
+//         end
+//
+//       end //PIO_INTR_GEN_REG
+//
+//       default : begin
+//
+//         gen_transaction <= #TCQ 1'b0;
+//         gen_leg_intr    <= #TCQ 1'b0;
+//         gen_msi_intr    <= #TCQ 1'b0;
+//         gen_msix_intr   <= #TCQ 1'b0;
+//
+//       end
+//
+//     endcase
+//
+//   end
+//  end
 
 
   // Write controller busy
@@ -378,6 +378,54 @@ module PIO_EP_MEM_ACCESS #(
                     {rd_be[1] ? rd_data_raw_o[15:08] : 8'h0},
                     {rd_be[0] ? rd_data_raw_o[07:00] : 8'h0}};
 
+//===============================================================//
+// BAR0 read access request                                      //
+//===============================================================//
+reg [31:0] read_data;
+reg [31:0] id = 32'h01_23_45_67;
+
+always @(posedge user_clk) begin
+	if (!reset_n) begin
+	end else if (rd_addr[13:12] == 2'b01) begin  // if BAR0 ?
+		case (rd_addr[7:0])
+		8'h00: // ID
+			read_data[31:0] <= {id[7:0], id[15:8], id[23:16], id[31:24]};
+		8'h01: // dipsw
+			read_data[31:0] <= {dipsw[7:0], 24'h0};
+		8'h02: // led
+			read_data[31:0] <= {led, 24'h0};
+		default:
+			read_data[31:0] <= 32'h00;
+		endcase
+	end
+end
+
+//===============================================================//
+// BAR0 write access request                                     //
+//===============================================================//
+always @(posedge user_clk) begin
+	if (!reset_n) begin
+	end else if (wr_addr[13:12] == 2'b01 && wr_en) begin   // if BAR0 and write enable ?
+		case (wr_addr[7:0])
+		8'h00: begin // ID
+			if (wr_be[0])
+				id[31:24] <= wr_data[7:0];
+			if (wr_be[1])
+				id[23:16] <= wr_data[15:8];
+			if (wr_be[2])
+				id[15:8] <= wr_data[23:16];
+			if (wr_be[3])
+				id[7:0] <= wr_data[31:24];
+		end
+		8'h02: begin // led
+			if (wr_be[3])
+				led[7:0] <= wr_data[31:24];
+		end
+		endcase
+	end
+end
+
+
 // BIOS ROM
 wire [31:0] bios_data;
 biosrom biosrom_0 (
@@ -386,66 +434,12 @@ biosrom biosrom_0 (
         .addr(rd_addr[8:0]),
         .data({bios_data[7:0], bios_data[15:8], bios_data[23:16], bios_data[31:24]})
 );
-assign rd_data0_o = bios_data;
-assign rd_data1_o = bios_data;
-assign rd_data2_o = bios_data;
-assign rd_data3_o = 32'hffffffff; //bios_data;
-
-`ifndef NO
-  EP_MEM EP_MEM    (
-
-                    .clk_i(user_clk),
-
-                    .a_rd_a_i_0(rd_addr[11:0]),              // I [8:0]
-                    .a_rd_en_i_0(rd_data0_en),                // I [1:0]
-//                    .a_rd_d_o_0(rd_data0_o),                  // O [31:0]
-
-                    .b_wr_a_i_0(wr_addr_inc[11:0]),              // I [8:0]
-                    .b_wr_d_i_0(post_wr_data),                // I [31:0]
-                    .b_wr_en_i_0({write_en & (wr_addr[13:12] == 2'b00)}), // I
-                    .b_rd_d_o_0(w_pre_wr_data0[31:0]),        // O [31:0]
-                    .b_rd_en_i_0({wr_addr[13:12] == 2'b00}), // I
-
-                    .a_rd_a_i_1(rd_addr[11:0]),              // I [8:0]
-                    .a_rd_en_i_1(rd_data1_en),                // I [1:0]
-  //                  .a_rd_d_o_1(rd_data1_o),                  // O [31:0]
-
-                    .b_wr_a_i_1(wr_addr_inc[11:0]),              // [8:0]
-                    .b_wr_d_i_1(post_wr_data),                // [31:0]
-                    .b_wr_en_i_1({write_en & (wr_addr[13:12] == 2'b01)}), // I
-                    .b_rd_d_o_1(w_pre_wr_data1[31:0]),        // [31:0]
-                    .b_rd_en_i_1({wr_addr[13:12] == 2'b01}), // I
-
-                    .a_rd_a_i_2(rd_addr[11:0]),              // I [8:0]
-                    .a_rd_en_i_2(rd_data2_en),                // I [1:0]
-//                    .a_rd_d_o_2(rd_data2_o),                  // O [31:0]
-
-                    .b_wr_a_i_2(wr_addr_inc[11:0]),              // I [8:0]
-                    .b_wr_d_i_2(post_wr_data),                // I [31:0]
-                    .b_wr_en_i_2({write_en & (wr_addr[13:12] == 2'b10)}), // I
-                    .b_rd_d_o_2(w_pre_wr_data2[31:0]),        // I [31:0]
-                    .b_rd_en_i_2({wr_addr[13:12] == 2'b10}), // I
-
-                    .a_rd_a_i_3(rd_addr[11:0]),              // [8:0]
-                    .a_rd_en_i_3(rd_data3_en),                // [1:0]
-//                    .a_rd_d_o_3(rd_data3_o),                  // O [31:0]
-
-                    .b_wr_a_i_3(wr_addr_inc[11:0]),              // I [8:0]
-                    .b_wr_d_i_3(post_wr_data),                // I [31:0]
-                    .b_wr_en_i_3({write_en & (wr_addr[13:12] == 2'b11)}), // I
-                    .b_rd_d_o_3(w_pre_wr_data3[31:0]),        // I [31:0]
-                    .b_rd_en_i_3({wr_addr[13:12] == 2'b11})  // I
-
-                   );
-`else
-assign rd_data0_o = 32'h33221100;
-assign rd_data1_o = 32'h77665544;
-assign rd_data2_o = 32'hbbaa9988;
-assign rd_data3_o = 32'hffeeddcc;
-`endif
 
 
-
+assign rd_data0_o = 32'hffffffff; // I/O Port (not use)
+assign rd_data1_o = read_data;    // BAR0 32bit
+assign rd_data2_o = bios_data;    // BAR2 64bit
+assign rd_data3_o = 32'hffffffff; // rom bios_data;
 
 
   // synthesis translate_off
