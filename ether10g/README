@@ -8,13 +8,14 @@ KC705 internal SFP+ module test project
 [> Support Boards
 1- Xilinx KC705
 2- Xilinx VC709
+3- Xilinx ZC706
 
 [> Building tools
 You will need:
  - Xilinx Vivado 2014.4.1
 
 [> How to build
-1- cd boards/kc705 or vc709
+1- cd boards/kc705 or vc709 or zc706
 2- make (console mode) or make gui (GUI mode)
 
 [> Quickstart

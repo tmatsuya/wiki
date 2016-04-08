@@ -1,5 +1,4 @@
 `default_nettype none
-`include "setup.v"
 
 module top (
 	// 200MHz reference clock input
@@ -197,22 +196,13 @@ network_path network_path_inst_0 (
 	.xgmii_rxd(xgmii_rxd),
 	.xgmii_rxc(xgmii_rxc),
 	.sim_speedup_control(sim_speedup_control),
-`ifdef BOARD_REV10
-	.polarity(1'b1)	// 1:KC705 Rev.1.0, see http://japan.xilinx.com/support/answers/46614.html
-`else
-	.polarity(1'b0)	// 0:KC705 Rev.1.1-
-`endif
+	.polarity(1'b0)	
 ); 
 
 xgbaser_gt_same_quad_wrapper xgbaser_gt_wrapper_inst_0 (
 	.areset(sys_rst),
-`ifdef USE_SI5324
 	.refclk_p(SI5324_OUT_C_P),
 	.refclk_n(SI5324_OUT_C_N),
-`else
-	.refclk_p(sma_mgt_refclk_p),
-	.refclk_n(sma_mgt_refclk_n),
-`endif
 	.txclk322(txclk322),
 	.gt0_tx_resetdone(xphy_tx_resetdone),
 	.gt1_tx_resetdone(),
