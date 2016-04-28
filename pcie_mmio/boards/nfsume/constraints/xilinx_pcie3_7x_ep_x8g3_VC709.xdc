@@ -59,7 +59,7 @@
 # Family       - virtex7
 # Part         - xc7vx690t
 # Package      - ffg1761
-# Speed grade  - -2
+# Speed grade  - -3
 # PCIe Block   - X0Y1
 ###############################################################################
 #
@@ -82,17 +82,17 @@
 #
 
 #System Reset, User Reset, User Link Up, User Clk Heartbeat
-set_property LOC AM39 [get_ports led_0]
-set_property LOC AN39 [get_ports led_1]
-set_property LOC AR37 [get_ports led_2]
-set_property LOC AT37 [get_ports led_3]
+#set_property LOC AM39 [get_ports led_0]
+#set_property LOC AN39 [get_ports led_1]
+#set_property LOC AR37 [get_ports led_2]
+#set_property LOC AT37 [get_ports led_3]
 
-set_property IOSTANDARD LVCMOS18 [get_ports led_0]
-set_property IOSTANDARD LVCMOS18 [get_ports led_1]
-set_property IOSTANDARD LVCMOS18 [get_ports led_2]
-set_property IOSTANDARD LVCMOS18 [get_ports led_3]
+#set_property IOSTANDARD LVCMOS18 [get_ports led_0]
+#set_property IOSTANDARD LVCMOS18 [get_ports led_1]
+#set_property IOSTANDARD LVCMOS18 [get_ports led_2]
+#set_property IOSTANDARD LVCMOS18 [get_ports led_3]
 
-set_false_path -to [get_ports -filter {NAME=~led_*}]
+#set_false_path -to [get_ports -filter {NAME=~led_*}]
 
 #########################################################################################################################
 # End User Constraints

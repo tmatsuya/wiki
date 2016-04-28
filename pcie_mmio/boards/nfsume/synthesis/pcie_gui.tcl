@@ -3,7 +3,7 @@ set design_top top
 set sim_top board
 set device xc7vx690t-3-ffg1761
 set proj_dir runs 
-set impl_const ../constraints/vc709.xdc
+set impl_const ../constraints/sume.xdc
 
 create_project -name ${design_top} -force -dir "./${proj_dir}" -part ${device}
 
