@@ -41,11 +41,6 @@ module top # (
 
         input wire clk200_p,
         input wire clk200_n,
-        input wire button_n,
-        input wire button_s,
-        input wire button_w,
-        input wire button_e,
-        input wire button_c,
         input wire [7:0] dipsw,
         output wire [7:0] led
 );
@@ -238,7 +233,7 @@ end
 
 wire sys_rst;
 
-assign sys_rst = (button_c | cold_reset | ~user_lnk_up | user_reset);
+assign sys_rst = (cold_reset | ~user_lnk_up | user_reset);
 
 
   //----------------------------------------------------------------------------------------------------------------//
