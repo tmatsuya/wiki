@@ -187,7 +187,6 @@ module PIO_EP #(
   output                           req_completion,
   output                           completion_done,
 
-	input [7:0] dipsw,
 	output [7:0] led
 
 );
@@ -269,7 +268,6 @@ module PIO_EP #(
     .gen_leg_intr(gen_leg_intr),
     .gen_transaction(gen_transaction),
 
-	.dipsw(dipsw),
 	.led(led)
   );
 

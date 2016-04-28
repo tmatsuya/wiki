@@ -41,7 +41,6 @@ module top # (
 
         input wire clk200_p,
         input wire clk200_n,
-        input wire [7:0] dipsw,
         output wire [7:0] led
 );
 
@@ -664,7 +663,6 @@ pcie3_7x_0_support_i (
     .user_reset                                     ( user_reset ),
     .user_lnk_up                                    ( user_lnk_up ),
 
-	.dipsw(dipsw),
 	.led(led)
   );
 

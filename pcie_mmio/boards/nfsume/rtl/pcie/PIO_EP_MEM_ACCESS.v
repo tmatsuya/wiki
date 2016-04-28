@@ -106,7 +106,6 @@ module PIO_EP_MEM_ACCESS #(
   output reg           gen_msi_intr,
   output reg           gen_msix_intr,
 
-	input [7:0] dipsw,
 	output reg [7:0] led = 8'h00
 
   );
@@ -390,8 +389,8 @@ always @(posedge user_clk) begin
 		case (rd_addr[7:0])
 		8'h00: // ID
 			read_data[31:0] <= {id[7:0], id[15:8], id[23:16], id[31:24]};
-		8'h01: // dipsw
-			read_data[31:0] <= {dipsw[7:0], 24'h0};
+//		8'h01: // dipsw
+//			read_data[31:0] <= {dipsw[7:0], 24'h0};
 		8'h02: // led
 			read_data[31:0] <= {led, 24'h0};
 		default:

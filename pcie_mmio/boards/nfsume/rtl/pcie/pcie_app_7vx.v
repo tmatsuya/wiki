@@ -238,7 +238,6 @@ module  pcie_app_7vx#(
   input                                      user_reset,
   input                                      user_lnk_up,
 
-	input wire [7:0] dipsw,
 	output wire [7:0] led
 
 );
@@ -392,7 +391,6 @@ PIO #(
   .reset_n                                        ( ~user_reset ),
   .user_lnk_up                                    ( user_lnk_up ),
 
-	.dipsw(dipsw),
 	.led(led)
 
  );

@@ -192,7 +192,6 @@ module PIO #(
   input                            cfg_power_state_change_interrupt,
   output                           cfg_power_state_change_ack,
 
-	input [7:0] dipsw,
 	output [7:0] led
 
 ); // synthesis syn_hier = "hard"
@@ -288,7 +287,6 @@ module PIO #(
     .req_completion                          ( req_completion ),
     .completion_done                         ( completion_done ),
 
-	.dipsw(dipsw),
 	.led(led)
 
   );
