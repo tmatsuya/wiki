@@ -34,7 +34,6 @@ read_verilog "../rtl/pcie/PIO_RX_ENGINE.v"
 read_verilog "../rtl/pcie/PIO_TO_CTRL.v"
 read_verilog "../rtl/pcie/PIO_TX_ENGINE.v"
 read_verilog "../rtl/biosrom.v"
-read_verilog "../rtl/pcie/EP_MEM.v"
 read_verilog "../rtl/pcie/PIO_INTR_CTRL.v"
 
 
