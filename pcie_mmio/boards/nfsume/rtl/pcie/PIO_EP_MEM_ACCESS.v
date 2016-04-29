@@ -110,6 +110,13 @@ module PIO_EP_MEM_ACCESS #(
 
   );
 
+  always @* begin
+    gen_transaction = 1'b0;
+    gen_leg_intr = 1'b0;
+    gen_msi_intr = 1'b0;
+    gen_msix_intr = 1'b0;
+  end
+    
   localparam PIO_MEM_ACCESS_WR_RST     = 3'b000;
   localparam PIO_MEM_ACCESS_WR_WAIT    = 3'b001;
   localparam PIO_MEM_ACCESS_WR_READ    = 3'b010;
