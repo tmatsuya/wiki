@@ -19,5 +19,6 @@ $(SYNTHPATH)/runs/top.runs/impl_1/top.mcs: $(SYNTHPATH)/runs/top.runs/impl_1/top
 
 clean:
 	@(cd $(SYNTHPATH) && rm -fr runs vivado*jou vivado*log)
+	rm -f *.log *.jou
 
 .PHONY: clean gui load flash
