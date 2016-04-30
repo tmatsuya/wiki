@@ -1,20 +1,26 @@
 #!/bin/bash
-# Xilinx Programing scripts using Vivado
+# Xilinx Programming scripts using Vivado
 # Takeshi Matsuya (macchan@sfc.wide.ad.jp)
 
+DEFAULT_HOST="localhost:3121"
 DEFAULT_BOARD="KC705"
+#DEFAULT_BOARD="VC709"
 #DEFAULT_BOARD="ZYBO"
 
 
 function flash {
 case "${board}" in
-	"KC705" )
+	"KC705" ) flash="28f00ap30t-bpi-x16" ;;
+	"VC709" ) flash="mt28gu01gaax1e-bpi-x16" ;;
+esac
+case "${board}" in
+	"KC705" | "VC709" )
 	vivado -mode tcl -nojournal -nolog <<EOF
 	open_hw
-	connect_hw_server -url localhost:3121
+	connect_hw_server -url ${host}
         set_property PARAM.FREQUENCY 15000000 [lindex [get_hw_targets *${target}*] 0]
         open_hw_target
-	create_hw_cfgmem -hw_device [lindex [get_hw_devices] 0] -mem_dev [lindex [get_cfgmem_parts {28f00ap30t-bpi-x16}] 0]
+	create_hw_cfgmem -hw_device [lindex [get_hw_devices] 0] -mem_dev [lindex [get_cfgmem_parts {${flash}}] 0]
 	set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices] 0 ]]
 	set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices] 0 ]]
 	set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices] 0 ]]
@@ -43,7 +49,7 @@ esac
 
 function mcs {
 case "${board}" in
-	"KC705" )
+	"KC705" | "VC709" )
 	vivado -mode tcl -nojournal -nolog <<EOF
 	write_cfgmem -force -format MCS -size 128 -interface BPIx16 -loadbit "up 0x0 ${bitfile}" ${mcsfile}
 EOF
@@ -59,7 +65,7 @@ case "${board}" in
 esac
 	vivado -mode tcl -nojournal -nolog <<EOF
 	open_hw
-	connect_hw_server -url localhost:3121
+	connect_hw_server -url ${host}
 	current_hw_target [lindex [get_hw_targets *${target}*] 0]
 	set_property PARAM.FREQUENCY 15000000 [lindex [get_hw_targets *${target}*] 0]
 	open_hw_target
@@ -76,7 +82,7 @@ EOF
 function list {
 	vivado -mode tcl -nojournal -nolog <<EOF
 	open_hw
-	connect_hw_server -url localhost:3121
+	connect_hw_server -url ${host}
 	puts "#  target_id"
 	puts "\t#  device name"
 	puts "----------------------------------"
@@ -100,17 +106,19 @@ EOF
 }
 
 function usage {
-	echo "usage: $0 list                                  ... list targets and connected devices"
-	echo "       $0 load  bit_file [-t target]            ... program FPGA"
-	echo "       $0 flash bit|mcs_file [-b board] [-t target] ... program ROM"
-	echo "       $0 mcs   bit_file [-b board]             ... generate mcs file"
+	echo "usage: $0 list  [-h host]                                 ... list targets and connected devices"
+	echo "       $0 load  bit_file [-h host] [-t target]            ... program FPGA"
+	echo "       $0 flash bit|mcs_file [-h host] [-b board] [-t target] ... program ROM"
+	echo "       $0 mcs   bit_file [-h host] [-b board]             ... generate mcs file"
 	echo ""
-	echo "  target example : 210203336974A"
-	echo "  supported board: kc705 zybo"
+	echo "<option parameter>:"
+	echo "  host  : localhost:3121 or 192.168.1.1:3121"
+	echo "  target: 210203336974A"
+	echo "  board : kc705 or vc709 or zybo"
 	exit 0
 }
 
-GETOPT=`getopt -q -o ab:t:h -- "$@"` ; [ $? != 0 ] && usage
+GETOPT=`getopt -q -o ab:t:h: -- "$@"` ; [ $? != 0 ] && usage
 eval set -- "$GETOPT"
 while true
 do
@@ -121,7 +129,7 @@ do
 	;;
 	-t)  target=$2       ; shift 2
 	;;
-	-h)  usage
+	-h)  host=$2         ; shift 2
 	;;
 	--)  shift ; break
 	;;
@@ -129,6 +137,14 @@ do
 	;;
 	esac
 done
+
+if [ "${host}" = "" ]; then
+	if [ "${VIVADO_HOST}" = "" ]; then
+		host=${DEFAULT_HOST}
+	else
+		host=${VIVADO_HOST}
+	fi
+fi
 
 if [ "${board}" = "" ]; then
 	if [ "${VIVADO_BOARD}" = "" ]; then

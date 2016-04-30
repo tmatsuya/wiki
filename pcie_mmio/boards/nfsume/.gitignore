@@ -1,0 +1,4 @@
+ip_catalog/*/*
+!ip_catalog/*/*.xci
+!ip_catalog/*/*.xcix
+
