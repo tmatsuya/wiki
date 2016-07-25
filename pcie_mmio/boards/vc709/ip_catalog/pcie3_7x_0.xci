@@ -7,7 +7,7 @@
   <spirit:componentInstances>
     <spirit:componentInstance>
       <spirit:instanceName>pcie3_7x_0</spirit:instanceName>
-      <spirit:componentRef spirit:vendor="xilinx.com" spirit:library="ip" spirit:name="pcie3_7x" spirit:version="4.1"/>
+      <spirit:componentRef spirit:vendor="xilinx.com" spirit:library="ip" spirit:name="pcie3_7x" spirit:version="4.2"/>
       <spirit:configurableElementValues>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.ARI_CAP_ENABLE">FALSE</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.AXISTEN_IF_CC_ALIGNMENT_MODE">FALSE</spirit:configurableElementValue>
@@ -439,6 +439,7 @@
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.axisten_if_enable_msg_route">2FFFF</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.axisten_if_enable_rx_msg_intfc">false</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.axisten_if_width">256_bit</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.cc_cq_alignment">None</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.cfg_ctl_if">true</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.cfg_ext_if">true</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.cfg_fc_if">true</spirit:configurableElementValue>
@@ -647,6 +648,7 @@
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.pf1_tphr_enable">false</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.pipe_mode_sim">None</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.pipe_sim">false</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.rc_rq_alignment">None</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.rcv_msg_if">true</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.shared_logic_in_core">false</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.silicon_rev">Production</spirit:configurableElementValue>
@@ -656,7 +658,7 @@
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.vendor_id">3776</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.xlnx_ref_board">VC709</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.ARCHITECTURE">virtex7</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.BOARD">xilinx.com:vc709:part0:1.7</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.BOARD"/>
         <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.DEVICE">xc7vx690t</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.PACKAGE">ffg1761</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.PREFHDL">VERILOG</spirit:configurableElementValue>
@@ -672,7 +674,7 @@
         <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.OUTPUTDIR">.</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.SELECTEDSIMMODEL"/>
         <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.SHAREDDIR">.</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.SWVERSION">2015.4</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.SWVERSION">2016.2</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.SYNTHESISFLOW">OUT_OF_CONTEXT</spirit:configurableElementValue>
       </spirit:configurableElementValues>
       <spirit:vendorExtensions>
