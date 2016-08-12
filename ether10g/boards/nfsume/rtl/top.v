@@ -34,14 +34,14 @@ module top (
 	input wire xphy3_rxn,
 	output wire [3:0] sfp_tx_disable,   
 
-	// BUTTON
-	input wire button_n,
-	input wire button_s,
-	input wire button_w,
-	input wire button_e,
-	input wire button_c,
-	// DIP SW
-	input wire [3:0] dipsw,
+	//// BUTTON
+	//input wire button_n,
+	//input wire button_s,
+	//input wire button_w,
+	//input wire button_e,
+	//input wire button_c,
+	//// DIP SW
+	//input wire [3:0] dipsw,
 	// Diagnostic LEDs
 	output wire [7:0] led
  );
@@ -336,13 +336,13 @@ app app_inst (
 	.xgmii_rxc(xgmii_rxc_0),
 	.xphy_status(xphy0_status),
 	// BUTTON
-	.button_n(button_n),
-	.button_s(button_s),
-	.button_w(button_w),
-	.button_e(button_e),
-	.button_c(button_c),
+	.button_n(1'b0),
+	.button_s(1'b0),
+	.button_w(1'b0),
+	.button_e(1'b0),
+	.button_c(1'b0),
 	// DIP SW
-	.dipsw(dipsw),
+	.dipsw(4'd0),
 	// Diagnostic LEDs
 	.led(led)
 );
