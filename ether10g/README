@@ -6,21 +6,22 @@ KC705 internal SFP+ module test project
               for supported FPGA boards.
 
 [> Support Boards
-1- Xilinx KC705
-2- Xilinx VC709
-3- Xilinx ZC706
+1- Xilinx   KC705
+2- Xilinx   VC709
+3- Xilinx   ZC706
+4- Digilent NetFPGA-SUME
 
 [> Building tools
 You will need:
  - Xilinx Vivado 2014.4.1
 
 [> How to build
-1- cd boards/kc705 or vc709 or zc706
+1- cd boards/kc705 or vc709 or zc706 or nfsume
 2- make (console mode) or make gui (GUI mode)
 
 [> Quickstart
 1- connect serial and JTAG cables
-2- cd boards/kc705 or vc709
+2- cd boards/kc705 or vc709 or zc706 or nfsume
 3- make load (or make flash)
 
 [> History
